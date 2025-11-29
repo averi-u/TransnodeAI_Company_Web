@@ -127,6 +127,49 @@ const ContactPage: React.FC = () => {
                         <Youtube size={24} className="text-slate-400 group-hover:text-red-600 transition-colors" />
                         <span className="font-semibold text-slate-700 group-hover:text-red-600">YouTube</span>
                     </a>
+
+                    {/* Other Platforms (Combined Card with Clickable Icons) */}
+                    <div className="flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+                        <div className="flex -space-x-2 pl-1">
+                            {/* Douyin */}
+                            <a 
+                               href="https://www.douyin.com"
+                               target="_blank"
+                               rel="noreferrer"
+                               className="w-8 h-8 rounded-full bg-slate-400 border-2 border-white flex items-center justify-center shrink-0 z-30 relative hover:z-40 hover:bg-black transition-all hover:scale-110" 
+                               title="Douyin"
+                            >
+                                <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
+                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                                </svg>
+                            </a>
+                            {/* Rednote */}
+                            <a 
+                               href="https://xhslink.com/m/8XBs8mCZ20E"
+                               target="_blank"
+                               rel="noreferrer"
+                               className="w-8 h-8 rounded-full bg-slate-400 border-2 border-white flex items-center justify-center shrink-0 z-20 relative hover:z-40 hover:bg-[#FF2442] transition-all hover:scale-110" 
+                               title="Rednote"
+                            >
+                                <span className="text-white text-xs font-bold">小</span>
+                            </a>
+                            {/* Bilibili */}
+                            <a 
+                               href="https://b23.tv/XwOAmRM"
+                               target="_blank"
+                               rel="noreferrer"
+                               className="w-8 h-8 rounded-full bg-slate-400 border-2 border-white flex items-center justify-center shrink-0 z-10 relative hover:z-40 hover:bg-[#00A1D6] transition-all hover:scale-110" 
+                               title="Bilibili"
+                            >
+                                <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4">
+                                     <path d="M20 7H4C2.9 7 2 7.9 2 9V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V9C22 7.9 21.1 7 20 7ZM20 19H4V9H20V19Z M8 3L10.5 6.5H13.5L16 3" />
+                                     <circle cx="9" cy="14" r="1.5" />
+                                     <circle cx="15" cy="14" r="1.5" />
+                                </svg>
+                            </a>
+                        </div>
+                        <span className="font-semibold text-slate-700">Other</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -245,15 +288,15 @@ const ContactPage: React.FC = () => {
                     </div>
                     <div>
                         <h3 className="text-xl font-bold text-[#0A2540]">{content.contact.investorTitle}</h3>
-                        <p className="text-slate-500 text-sm">{content.contact.investorDesc}</p>
+                        <p className="text-slate-500 text-sm">Track our company profile and funding journey.</p>
                     </div>
                 </div>
                 
                 <div className="w-full grid grid-cols-2 gap-3 mt-2">
-                    <a href="#" className="flex items-center justify-center px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-semibold hover:border-purple-400 hover:text-purple-700 transition-colors text-sm">
+                    <a href="#" target="_blank" rel="noreferrer" className="flex items-center justify-center px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-semibold hover:border-purple-400 hover:text-purple-700 transition-colors text-sm">
                         Crunchbase
                     </a>
-                    <a href="#" className="flex items-center justify-center px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-semibold hover:border-slate-900 hover:text-slate-900 transition-colors text-sm">
+                    <a href="#" target="_blank" rel="noreferrer" className="flex items-center justify-center px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-semibold hover:border-slate-900 hover:text-slate-900 transition-colors text-sm">
                         AngelList
                     </a>
                 </div>
