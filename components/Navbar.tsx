@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Cpu } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 
 // Define the available views
@@ -59,16 +59,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="#" onClick={handleLogoClick} className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 shrink-0 rounded-lg overflow-hidden border border-white/10 shadow-sm bg-white">
-             <img 
-               src="TransnodeAI_logo.JPG" 
-               alt="Transnode AI Logo" 
-               className="w-full h-full object-cover" 
-               onError={(e) => {
-                 e.currentTarget.onerror = null; 
-                 e.currentTarget.src = 'https://placehold.co/100x100/003B73/FFFFFF?text=T';
-               }}
-             />
+          <div className="w-10 h-10 shrink-0 rounded-lg overflow-hidden border border-white/10 shadow-sm bg-white flex items-center justify-center text-[#0A2540]">
+             <Cpu size={24} />
           </div>
           <span className="text-lg md:text-xl font-bold tracking-tight text-white group-hover:text-teal-400 transition-colors flex items-center gap-1.5">
             Transnode

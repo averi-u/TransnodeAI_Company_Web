@@ -80,6 +80,14 @@ export interface ContentType {
     locationDesc: string;
     socialTitle: string;
     socialDesc: string;
+    socialPlatforms: {
+      linkedin: string;
+      twitter: string;
+      instagram: string;
+      tiktok: string;
+      youtube: string;
+      other: string;
+    };
     formTitle: string;
     formName: string;
     formEmail: string;
@@ -267,6 +275,14 @@ const en: ContentType = {
     locationDesc: "San Diego, California",
     socialTitle: "Connect on Social Media",
     socialDesc: "Follow our journey, get the latest updates on our product launches, and join our growing community of innovators.",
+    socialPlatforms: {
+      linkedin: "LinkedIn",
+      twitter: "X (Twitter)",
+      instagram: "Instagram",
+      tiktok: "TikTok",
+      youtube: "YouTube",
+      other: "Other"
+    },
     formTitle: "Send a Message",
     formName: "Your Name",
     formEmail: "Email Address",
@@ -554,6 +570,14 @@ const zh: ContentType = {
     locationDesc: "加利福尼亚州圣地亚哥",
     socialTitle: "社交媒体",
     socialDesc: "关注我们的旅程，获取产品发布的最新更新，并加入我们不断壮大的创新者社区。",
+    socialPlatforms: {
+      linkedin: "领英 (LinkedIn)",
+      twitter: "推特 (X)",
+      instagram: "Instagram",
+      tiktok: "TikTok",
+      youtube: "YouTube",
+      other: "其他平台"
+    },
     formTitle: "发送消息",
     formName: "您的姓名",
     formEmail: "电子邮件地址",
@@ -829,6 +853,14 @@ const es: ContentType = {
     locationDesc: "San Diego, California",
     socialTitle: "Conéctate en Redes Sociales",
     socialDesc: "Sigue nuestro viaje, obtén las últimas actualizaciones sobre nuestros lanzamientos y únete a nuestra comunidad.",
+    socialPlatforms: {
+      linkedin: "LinkedIn",
+      twitter: "X (Twitter)",
+      instagram: "Instagram",
+      tiktok: "TikTok",
+      youtube: "YouTube",
+      other: "Otros"
+    },
     formTitle: "Enviar Mensaje",
     formName: "Tu Nombre",
     formEmail: "Correo Electrónico",
@@ -1104,6 +1136,14 @@ const ko: ContentType = {
     locationDesc: "캘리포니아 샌디에이고",
     socialTitle: "소셜 미디어 연결",
     socialDesc: "여정을 팔로우하고, 제품 출시 최신 소식을 받고, 성장하는 혁신가 커뮤니티에 참여하세요.",
+    socialPlatforms: {
+      linkedin: "링크드인 (LinkedIn)",
+      twitter: "X (Twitter)",
+      instagram: "인스타그램",
+      tiktok: "틱톡 (TikTok)",
+      youtube: "유튜브 (YouTube)",
+      other: "기타"
+    },
     formTitle: "메시지 보내기",
     formName: "성함",
     formEmail: "이메일 주소",

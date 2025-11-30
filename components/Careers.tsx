@@ -24,7 +24,9 @@ const Careers: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a 
-                href="mailto:contact@transnode.ai?subject=Internship%20Application"
+                href="https://www.indeed.com/viewjob?jk=98d83ed93e6e32f3&from=shareddesktop_copy"
+                target="_blank"
+                rel="noreferrer"
                 className="px-8 py-3 rounded-lg bg-teal-500 text-[#0A2540] font-bold hover:bg-teal-400 transition-colors inline-flex items-center justify-center"
               >
                 {content.careers.btnApply}

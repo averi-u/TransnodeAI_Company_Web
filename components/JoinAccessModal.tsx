@@ -84,7 +84,7 @@ const JoinAccessModal: React.FC<JoinAccessModalProps> = ({ isOpen, onClose }) =>
               </p>
               <div className="flex flex-col gap-3">
                  <a 
-                   href="https://www.instagram.com/averieee.y?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" 
+                   href="https://www.instagram.com/transnode.ai?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" 
                    target="_blank" 
                    rel="noreferrer" 
                    className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-lg hover:shadow-lg transition-all font-medium"
@@ -166,7 +166,7 @@ const JoinAccessModal: React.FC<JoinAccessModalProps> = ({ isOpen, onClose }) =>
               </div>
 
               <a 
-                href="https://www.instagram.com/averieee.y?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" 
+                href="https://www.instagram.com/transnode.ai?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" 
                 target="_blank" 
                 rel="noreferrer"
                 className="w-full py-3 border border-pink-200 bg-pink-50/50 hover:bg-pink-50 text-pink-600 font-semibold rounded-xl flex items-center justify-center gap-2 transition-colors group"

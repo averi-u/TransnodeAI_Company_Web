@@ -81,7 +81,7 @@ const ContactPage: React.FC = () => {
                       className="flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-200 hover:border-blue-500 hover:text-blue-600 transition-all group shadow-sm"
                     >
                         <Linkedin size={24} className="text-slate-400 group-hover:text-blue-600 transition-colors" />
-                        <span className="font-semibold text-slate-700 group-hover:text-blue-600">LinkedIn</span>
+                        <span className="font-semibold text-slate-700 group-hover:text-blue-600">{content.contact.socialPlatforms.linkedin}</span>
                     </a>
                     
                     <a 
@@ -93,17 +93,17 @@ const ContactPage: React.FC = () => {
                         <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-slate-400 group-hover:text-black transition-colors">
                             <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
                         </svg>
-                        <span className="font-semibold text-slate-700 group-hover:text-black">X (Twitter)</span>
+                        <span className="font-semibold text-slate-700 group-hover:text-black">{content.contact.socialPlatforms.twitter}</span>
                     </a>
 
                     <a 
-                      href="https://www.instagram.com/averieee.y?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" 
+                      href="https://www.instagram.com/transnode.ai?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" 
                       target="_blank"
                       rel="noreferrer"
                       className="flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-200 hover:border-pink-500 hover:text-pink-600 transition-all group shadow-sm"
                     >
                         <Instagram size={24} className="text-slate-400 group-hover:text-pink-600 transition-colors" />
-                        <span className="font-semibold text-slate-700 group-hover:text-pink-600">Instagram</span>
+                        <span className="font-semibold text-slate-700 group-hover:text-pink-600">{content.contact.socialPlatforms.instagram}</span>
                     </a>
 
                      <a 
@@ -115,7 +115,7 @@ const ContactPage: React.FC = () => {
                         <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-slate-400 group-hover:text-black transition-colors">
                             <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                         </svg>
-                        <span className="font-semibold text-slate-700 group-hover:text-black">TikTok</span>
+                        <span className="font-semibold text-slate-700 group-hover:text-black">{content.contact.socialPlatforms.tiktok}</span>
                     </a>
 
                     <a 
@@ -125,7 +125,7 @@ const ContactPage: React.FC = () => {
                        className="flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-200 hover:border-red-600 hover:text-red-600 transition-all group shadow-sm"
                      >
                         <Youtube size={24} className="text-slate-400 group-hover:text-red-600 transition-colors" />
-                        <span className="font-semibold text-slate-700 group-hover:text-red-600">YouTube</span>
+                        <span className="font-semibold text-slate-700 group-hover:text-red-600">{content.contact.socialPlatforms.youtube}</span>
                     </a>
 
                     {/* Other Platforms (Combined Card with Clickable Icons) */}
@@ -168,7 +168,7 @@ const ContactPage: React.FC = () => {
                                 </svg>
                             </a>
                         </div>
-                        <span className="font-semibold text-slate-700">Other</span>
+                        <span className="font-semibold text-slate-700">{content.contact.socialPlatforms.other}</span>
                     </div>
                 </div>
             </div>
