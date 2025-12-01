@@ -293,7 +293,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div className="w-full grid grid-cols-2 gap-3 mt-2">
-                    <a href="#" target="_blank" rel="noreferrer" className="flex items-center justify-center px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-semibold hover:border-purple-400 hover:text-purple-700 transition-colors text-sm">
+                    <a href="https://www.crunchbase.com/organization/transnode-ai-llc" target="_blank" rel="noreferrer" className="flex items-center justify-center px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-semibold hover:border-purple-400 hover:text-purple-700 transition-colors text-sm">
                         Crunchbase
                     </a>
                     <a href="#" target="_blank" rel="noreferrer" className="flex items-center justify-center px-4 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-semibold hover:border-slate-900 hover:text-slate-900 transition-colors text-sm">

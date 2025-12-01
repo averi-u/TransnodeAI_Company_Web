@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, Heart } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Heart } from 'lucide-react';
 import ThreeBackground from './ThreeBackground';
 import { useLanguage } from './LanguageContext';
 
@@ -11,6 +11,33 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onJoinClick, onInvestorClick, onCrowdfundClick }) => {
   const { content } = useLanguage();
+
+  useEffect(() => {
+    // Dynamically load Typeform script to ensure it runs after the DOM element is present
+    const loadTypeform = () => {
+      // If script exists and tf object is available, try to refresh
+      if ((window as any).tf && (window as any).tf.load) {
+        try {
+          (window as any).tf.load();
+        } catch (e) {
+          console.error("Typeform reload error", e);
+        }
+        return;
+      }
+      
+      // Remove existing script if any to force reload if needed, though robust check above usually suffices
+      const existingScript = document.getElementById('tf-script');
+      if (existingScript) existingScript.remove();
+
+      const script = document.createElement('script');
+      script.id = 'tf-script';
+      script.src = "//embed.typeform.com/next/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    };
+
+    loadTypeform();
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center bg-[#0A2540] text-white overflow-hidden pt-20">
@@ -38,14 +65,10 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick, onInvestorClick, onCrowdfundCl
             {content.hero.subheadline}
           </p>
           
-          <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4">
-            <button 
-              onClick={onJoinClick}
-              className="px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 group ring-1 ring-blue-400/20"
-            >
-              {content.hero.ctaPrimary}
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-            </button>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-4 items-center">
+            {/* Typeform Embed Button Replacement */}
+            <div data-tf-live="01KBC0Y49235A7HN2C8F0672GW"></div>
+
             <button 
               onClick={onInvestorClick}
               className="px-8 py-4 rounded-lg border border-slate-600 hover:border-teal-400 hover:bg-teal-500/5 text-white font-medium transition-all backdrop-blur-sm"

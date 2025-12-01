@@ -78,9 +78,9 @@ const JoinAccessModal: React.FC<JoinAccessModalProps> = ({ isOpen, onClose }) =>
               <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-white shadow-sm">
                 <CheckCircle size={32} />
               </div>
-              <h3 className="text-2xl font-bold text-slate-800 mb-2">You're on the list!</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-2">Request Received</h3>
               <p className="text-slate-600 mb-8 max-w-xs mx-auto">
-                Thanks for your interest in Transnode AI. We'll verify your details and reach out shortly.
+                Thank you for your interest. We've added you to our priority queue and will be in touch shortly.
               </p>
               <div className="flex flex-col gap-3">
                  <a 

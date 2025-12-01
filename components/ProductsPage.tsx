@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ArrowRight, Layers, Cpu, Shield } from 'lucide-react';
+import { Sparkles, Layers, Cpu, Shield, ArrowRight } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
 
 interface ProductsPageProps {
@@ -19,12 +19,16 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onJoinWaitlistClick }) => {
              {content.products.roadmapDesc}
            </p>
         </div>
-        <button 
-           onClick={onJoinWaitlistClick}
-           className="px-6 py-3 bg-[#0A2540] text-white font-bold rounded-lg shadow-lg hover:bg-blue-900 transition-colors flex items-center gap-2"
+        {/* Redirect Button to Google Slides Presentation */}
+        <a 
+          href="https://docs.google.com/presentation/d/1q_dOQSRppZY3fxlJXtKyD5oELZuB93xff40W3weMJQU/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+          className="px-6 py-3 bg-[#0A2540] hover:bg-teal-600 text-white font-bold rounded-lg transition-all shadow-md flex items-center gap-2"
         >
-           {content.products.earlyAccessBtn} <ArrowRight size={18} />
-        </button>
+          {content.products.earlyAccessBtn}
+          <ArrowRight size={18} />
+        </a>
       </div>
 
       <div className="grid gap-10">

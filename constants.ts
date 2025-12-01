@@ -1,4 +1,4 @@
-import { ShieldCheck, BookOpen, Globe, UserCheck, Network, Lock, Zap } from "lucide-react";
+import { ShieldCheck, BookOpen, Globe, UserCheck, Network, Zap } from "lucide-react";
 import { FeatureItem, ProductDetail, TrustPoint } from "./types";
 
 export const NAV_LINKS = [
