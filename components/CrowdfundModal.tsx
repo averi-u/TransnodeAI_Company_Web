@@ -139,7 +139,7 @@ const CrowdfundModal: React.FC<CrowdfundModalProps> = ({ isOpen, onClose }) => {
                 )}
             </div>
 
-            {/* Venmo/Zelle Option */}
+            {/* Venmo Option */}
             <div className="relative">
                 <button 
                   onClick={() => {
@@ -149,7 +149,7 @@ const CrowdfundModal: React.FC<CrowdfundModalProps> = ({ isOpen, onClose }) => {
                   className={`flex items-center justify-between w-full p-4 rounded-xl border transition-all text-left ${showPaymentDetails ? 'border-pink-500 bg-pink-50' : 'border-slate-200 hover:border-pink-500 hover:bg-pink-50'}`}
                 >
                   <div>
-                    <div className="font-bold text-[#0A2540]">Zelle / Venmo</div>
+                    <div className="font-bold text-[#0A2540]">Venmo Donation</div>
                     <div className="text-xs text-pink-600 font-medium">Become the 1 dollar Angel Investor</div>
                   </div>
                   <DollarSign size={20} className={`transition-colors ${showPaymentDetails ? 'text-pink-500' : 'text-slate-400'}`} />

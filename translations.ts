@@ -492,15 +492,759 @@ const en: ContentType = {
 };
 
 const zh: ContentType = {
-  ...en
+  nav: {
+    focus: "核心领域",
+    products: "产品",
+    team: "团队",
+    contact: "联系我们"
+  },
+  hero: {
+    badge: "AI 助力全球影响力",
+    headlineStart: "构建",
+    headlineHighlight: "智能工具",
+    headlineEnd: "赋能现代协作",
+    subheadline: "Transnode AI, LLC 开发跨境 AI 产品，提升可信度、加速科研并在全球范围内简化工作流程——深受学生、研究人员和全球中小企业的信赖。",
+    ctaPrimary: "加入早期体验",
+    ctaSecondary: "投资者咨询",
+    ctaCrowdfund: "1美元众筹致谢"
+  },
+  aiModels: {
+    title: "基于领先的 AI 模型构建"
+  },
+  features: {
+    title: "我们的核心领域",
+    items: [
+      {
+        title: "AI 验证技术",
+        description: "利用计算机视觉和 NLP 高精度验证证书、技能和职业里程碑。",
+        challenge: "简历欺诈和未经验证的技能每年给公司造成数十亿美元的损失。",
+        solution: "我们的多模态 AI 模型可即时验证文档并评估实践技能。"
+      },
+      {
+        title: "AI 教育",
+        description: "创建自适应学习环境，根据实时学生表现指标个性化内容交付。",
+        challenge: "传统的“一刀切”教育模式无法有效解决个体学习差距。",
+        solution: "自适应 AI 导师分析表现模式，提供个性化课程调整。"
+      },
+      {
+        title: "AI 匹配",
+        description: "利用图神经网络优化研究人员、志愿者和组织之间的配对，实现高影响力协作。",
+        challenge: "将合适的人才与合适的机会联系起来通常是手动密集型的，且效率低下。",
+        solution: "深度学习匹配算法分析超越关键词的兼容性。"
+      },
+      {
+        title: "AI 工作流优化",
+        description: "利用自主代理自动化跨境商务和学术管理中的复杂运营工作流。",
+        challenge: "跨境运营经常因语言障碍和复杂的合规文件而受阻。",
+        solution: "自主代理处理翻译、调度和合规工作流。"
+      }
+    ]
+  },
+  trust: {
+    title: "为什么学生、研究人员和企业信任我们",
+    points: [
+      "总部位于美国加州的 UCSD 校友创立公司",
+      "连接中美技术和研究生系统",
+      "AI 优先的产品理念，具备道德保障",
+      "承诺严格的数据隐私和保密性"
+    ],
+    nda: "所有项目合作均包含 NDA（保密协议）和安全数据处理实践。",
+    collaborationTitle: "卓越协作",
+    collaborationBadge: "已验证合作伙伴"
+  },
+  audience: {
+    title: "我们服务于谁",
+    subtitle: "赋能下一代研究人员、专业人士和全球创新者。",
+    items: [
+      { title: "学生", text: "寻求研究经验的本科生" },
+      { title: "求职者", text: "提高简历可信度的早期职业人士" },
+      { title: "研究人员", text: "寻找研究合作者的教授和实验室" },
+      { title: "中小企业", text: "拓展美国市场的跨境企业" }
+    ]
+  },
+  products: {
+    label: "创新管道",
+    title: "我们正在构建什么（预览）",
+    roadmapBtn: "查看路线图",
+    items: [
+      {
+        name: "USVerif",
+        tagline: "可信度引擎",
+        points: ["AI 可信度评分", "基于技能的验证任务", "个性化职业洞察"]
+      },
+      {
+        name: "Research Pipe",
+        tagline: "协作平台",
+        points: ["跨大学匹配", "AI 工作流与研究任务规划器", "保密性 + 协作管道"]
+      },
+      {
+        name: "中美电商 AI 工具",
+        tagline: "市场赋能",
+        points: ["内容生成", "低成本开店", "市场分析"]
+      }
+    ],
+    waitlistBtn: "加入候补名单",
+    earlyAccessBtn: "当前 MVP 演示",
+    roadmapTitle: "产品路线图",
+    roadmapDesc: "我们的智能工具旨在通过验证、协作和市场准入赋能下一代专业人士。"
+  },
+  team: {
+    hero: {
+      title: "我们的团队",
+      subheading: "我们的创始团队带来全球视野和来自加州大学圣地亚哥分校和复旦大学等中美顶尖机构的学术背景。我们结合 AI 系统、后端工程和研究运营方面的专业知识，为现代工作和验证构建可靠的智能工具。"
+    },
+    philosophy: {
+      title: "我们的工作方式",
+      items: [
+        {
+          title: "用户至上",
+          description: "我们构建产品以解决学生、研究人员和专业人士在复杂工作流中遇到的实际问题。",
+          icon: "compass"
+        },
+        {
+          title: "工程驱动",
+          description: "我们的团队拥有顶尖大学的技术背景，并在构建可扩展的生产级系统方面拥有实践经验。",
+          icon: "rocket"
+        },
+        {
+          title: "全球与跨学科",
+          description: "我们跨中美运营，结合 AI、设计和运营专业知识，快速行动并交付影响力。",
+          icon: "shield"
+        }
+      ]
+    },
+    founding: {
+      title: "创始团队",
+      intro: "我们的创始团队来自：",
+      bullets: [
+        "加州大学圣地亚哥分校 (计算机工程与经济学)",
+        "复旦大学 (计算机科学)",
+        "在 AI 工程、后端系统、产品开发和研究工作流方面拥有经验",
+        "曾从事机器学习、分布式系统、用户研究和跨境科技产品工作"
+      ],
+      closing: "我们正在扩充核心团队，以开发 USVerif 和 ResearchPipe。"
+    },
+    advisors: {
+      title: "顾问与合作者",
+      description: "我们积极与以下领域的研究人员、工程师和行业专业人士合作：",
+      areas: [
+        "人工智能",
+        "验证与合规",
+        "研究方法论",
+        "跨境运营",
+        "UI/UX 与产品战略"
+      ],
+      closing: "这个网络帮助我们快速验证想法，完善产品方向，并确保我们构建真正重要的解决方案。"
+    },
+    opportunities: {
+      title: "加入我们的团队",
+      description: "我们与有才华的学生和早期职业开发者合作，提供以下方面的实践经验：",
+      roles: [
+        "AI 产品开发",
+        "后端工程",
+        "研究运营",
+        "产品设计与 UX",
+        "全球科技运营 (美国 + 中国)"
+      ],
+      closing: "实习生直接参与我们的 MVP，快速学习，并帮助塑造 Transnode 的未来。",
+      button: "加入我们"
+    }
+  },
+  careers: {
+    title: "欢迎实习生与贡献者",
+    description: "我们提供 AI、数据、软件工程和产品设计方面的实践经验。非常适合寻求真实项目和作品集发展的学生。支持远程、基于项目、灵活的时间安排。",
+    btnApply: "申请实习",
+    btnStudent: "UCSD 学生通道 → 直接联系"
+  },
+  contact: {
+    tagline: "取得联系",
+    title: "联系我们",
+    description: "无论您是寻找机会的学生、寻求合作的研究人员，还是对我们愿景感兴趣的投资者，我们都希望能听到您的声音。",
+    emailTitle: "给我们发邮件",
+    emailDesc: "用于一般咨询、合作和支持。",
+    locationTitle: "总部",
+    locationDesc: "美国加利福尼亚州圣地亚哥",
+    socialTitle: "在社交媒体上联系",
+    socialDesc: "关注我们的旅程，获取产品发布的最新更新，并加入我们要不断壮大的创新者社区。",
+    socialPlatforms: {
+      linkedin: "LinkedIn",
+      twitter: "X (Twitter)",
+      instagram: "Instagram",
+      tiktok: "TikTok",
+      youtube: "YouTube",
+      other: "其他"
+    },
+    formTitle: "发送消息",
+    formName: "您的姓名",
+    formEmail: "电子邮件地址",
+    formSubject: "主题",
+    formMessage: "消息",
+    formButton: "发送消息",
+    sentTitle: "消息已发送！",
+    sentDesc: "我们会尽快回复您。",
+    investorTitle: "投资者？",
+    investorDesc: "在 Crunchbase 上关注我们"
+  },
+  faq: {
+    title: "常见问题",
+    items: [
+      {
+        question: "你们如何利用 AI 模型确保数据隐私？",
+        answer: "我们严格遵守 GDPR 和 CCPA 标准。数据在静态和传输过程中均经过匿名化和加密处理，以确保用户隐私不受侵犯。"
+      },
+      {
+        question: "你们为开发者提供 API 访问权限吗？",
+        answer: "我们目前处于内测阶段。您可以通过我们的产品页面申请早期访问，将我们的技术集成到您自己的平台中。"
+      },
+      {
+        question: "验证模型的准确性如何？",
+        answer: "我们的多模态验证系统在文档验证和深度伪造检测基准测试中达到了超过 98% 的准确率。"
+      },
+      {
+        question: "我可以将你们的工具用于学术研究吗？",
+        answer: "可以，我们为学术机构和个人研究人员提供特别许可和合作机会。"
+      },
+      {
+        question: "初创公司目前的状况如何，志愿者如何参与？",
+        answer: "我们目前处于带有现场试点项目的 Beta 测试阶段。我们欢迎志愿者和实习生加入我们的工程和研究团队，帮助扩大我们的影响力并完善我们的核心算法。"
+      },
+      {
+        question: "对投资者的长期影响愿景是什么？",
+        answer: "我们的目标是成为 AI 验证的学术和职业身份的全球标准。通过弥合教育和就业之间的差距，我们旨在减少招聘摩擦并释放数十亿美元的经济价值。"
+      }
+    ]
+  },
+  legalPage: {
+    title: "法律信息",
+    updated: "最后更新：2025年11月28日",
+    sidebar: {
+      privacy: "隐私政策",
+      terms: "服务条款",
+      confidentiality: "保密协议"
+    },
+    privacy: {
+      title: "隐私政策",
+      content: ["请参阅英文版以获取完整的法律约束条款。", "Transnode AI, LLC 尊重您的隐私..."]
+    },
+    terms: {
+      title: "服务条款",
+      content: ["请参阅英文版以获取完整的法律约束条款。", "感谢您关注 Transnode AI, LLC..."]
+    },
+    confidentiality: {
+      title: "保密与安全协议",
+      content: ["请参阅英文版以获取完整的法律约束条款。", "1. 保密信息的定义..."]
+    }
+  },
+  footer: {
+    tagline: "通过智能系统构建研究和职业可信度的未来。",
+    company: "公司",
+    legal: "法律",
+    rights: "Transnode AI, LLC. 保留所有权利。"
+  }
 };
 
 const es: ContentType = {
-  ...en
+  nav: {
+    focus: "Áreas de Enfoque",
+    products: "Productos",
+    team: "Equipo",
+    contact: "Contacto"
+  },
+  hero: {
+    badge: "IA para Impacto Global",
+    headlineStart: "Construyendo",
+    headlineHighlight: "Herramientas Inteligentes",
+    headlineEnd: "para la Colaboración Moderna.",
+    subheadline: "Transnode AI, LLC desarrolla productos de IA transfronterizos que mejoran la credibilidad, aceleran la investigación y agilizan los flujos de trabajo, con la confianza de estudiantes, investigadores y PYMES globales.",
+    ctaPrimary: "Acceso Anticipado",
+    ctaSecondary: "Consulta de Inversores",
+    ctaCrowdfund: "Crowdfunding de 1 Dólar"
+  },
+  aiModels: {
+    title: "CONSTRUIDO SOBRE MODELOS DE IA LÍDERES"
+  },
+  features: {
+    title: "Nuestras Áreas de Enfoque",
+    items: [
+      {
+        title: "Tecnología de Verificación IA",
+        description: "Aprovechando la visión por computadora y PNL para validar credenciales y habilidades con alta precisión.",
+        challenge: "El fraude en currículums y habilidades no verificadas cuestan miles de millones anualmente.",
+        solution: "Nuestros modelos de IA multimodales verifican instantáneamente documentos y evalúan habilidades."
+      },
+      {
+        title: "IA Educativa",
+        description: "Creando entornos de aprendizaje adaptativos que personalizan la entrega de contenido.",
+        challenge: "Los modelos educativos tradicionales no abordan las brechas de aprendizaje individuales.",
+        solution: "Tutores de IA adaptativos analizan patrones de rendimiento para proporcionar un plan de estudios personalizado."
+      },
+      {
+        title: "Emparejamiento IA",
+        description: "Utilizando redes neuronales gráficas para emparejar óptimamente investigadores, voluntarios y organizaciones.",
+        challenge: "Conectar el talento adecuado con la oportunidad adecuada es intensivo y propenso a sesgos.",
+        solution: "Algoritmos de emparejamiento de aprendizaje profundo analizan la compatibilidad más allá de las palabras clave."
+      },
+      {
+        title: "Optimización de Flujos de Trabajo",
+        description: "Automatizando flujos de trabajo operativos complejos en el comercio transfronterizo y la administración académica.",
+        challenge: "Las operaciones transfronterizas a menudo se ven obstaculizadas por barreras lingüísticas.",
+        solution: "Agentes autónomos manejan traducción, programación y flujos de trabajo de cumplimiento."
+      }
+    ]
+  },
+  trust: {
+    title: "Por qué confían en nosotros",
+    points: [
+      "Empresa con sede en EE. UU. fundada por exalumnos de UCSD",
+      "Uniendo ecosistemas técnicos y de investigación de EE. UU. y China",
+      "Filosofía de producto primero IA con salvaguardas éticas",
+      "Compromiso con la estricta privacidad y confidencialidad de los datos"
+    ],
+    nda: "Todas las colaboraciones incluyen NDA y prácticas seguras de manejo de datos.",
+    collaborationTitle: "Excelencia Colaborativa",
+    collaborationBadge: "Asociaciones Verificadas"
+  },
+  audience: {
+    title: "A quién ayudamos",
+    subtitle: "Empoderando a la próxima generación de investigadores, profesionales e innovadores globales.",
+    items: [
+      { title: "Estudiantes", text: "Estudiantes de pregrado que buscan experiencia en investigación" },
+      { title: "Buscadores de Empleo", text: "Profesionales que mejoran la credibilidad de su currículum" },
+      { title: "Investigadores", text: "Profesores y laboratorios que buscan colaboradores" },
+      { title: "PYMES", text: "Empresas transfronterizas que se expanden a los EE. UU." }
+    ]
+  },
+  products: {
+    label: "Tubería de Innovación",
+    title: "Lo Que Estamos Construyendo",
+    roadmapBtn: "Ver Hoja de Ruta",
+    items: [
+      {
+        name: "USVerif",
+        tagline: "Motor de Credibilidad",
+        points: ["Puntuación de credibilidad IA", "Verificación de habilidades", "Información profesional personalizada"]
+      },
+      {
+        name: "Research Pipe",
+        tagline: "Plataforma de Colaboración",
+        points: ["Emparejamiento interuniversitario", "Planificador de tareas de investigación", "Confidencialidad"]
+      },
+      {
+        name: "Herramientas de IA para E-Commerce",
+        tagline: "Habilitación de Mercado",
+        points: ["Generación de contenido", "Configuración de tienda de bajo costo", "Analítica de mercado"]
+      }
+    ],
+    waitlistBtn: "Unirse a la Lista de Espera",
+    earlyAccessBtn: "Presentación MVP Actual",
+    roadmapTitle: "Hoja de Ruta del Producto",
+    roadmapDesc: "Nuestras herramientas inteligentes están diseñadas para empoderar a la próxima generación de profesionales."
+  },
+  team: {
+    hero: {
+      title: "Nuestro Equipo",
+      subheading: "Nuestro equipo fundador aporta perspectivas globales y antecedentes académicos de las mejores instituciones de EE. UU. y China."
+    },
+    philosophy: {
+      title: "Cómo Trabajamos",
+      items: [
+        {
+          title: "Obsesionados con el Usuario",
+          description: "Construimos productos que resuelven problemas reales.",
+          icon: "compass"
+        },
+        {
+          title: "Impulsados por la Ingeniería",
+          description: "Nuestro equipo aporta experiencia técnica de universidades líderes.",
+          icon: "rocket"
+        },
+        {
+          title: "Global y Multidisciplinario",
+          description: "Operamos en EE. UU. y China, combinando experiencia en IA y diseño.",
+          icon: "shield"
+        }
+      ]
+    },
+    founding: {
+      title: "Equipo Fundador",
+      intro: "Nuestro equipo fundador proviene de:",
+      bullets: [
+        "UC San Diego (Ingeniería Informática y Economía)",
+        "Universidad de Fudan (Ciencias de la Computación)",
+        "Experiencia en ingeniería de IA y sistemas backend",
+        "Trabajo previo en aprendizaje automático y productos tecnológicos transfronterizos"
+      ],
+      closing: "Estamos expandiendo nuestro equipo central."
+    },
+    advisors: {
+      title: "Asesores y Colaboradores",
+      description: "Colaboramos activamente con investigadores e ingenieros en:",
+      areas: [
+        "Inteligencia Artificial",
+        "Verificación y cumplimiento",
+        "Metodología de investigación",
+        "Operaciones transfronterizas",
+        "Estrategia de producto"
+      ],
+      closing: "Esta red nos ayuda a validar ideas rápidamente."
+    },
+    opportunities: {
+      title: "Únete a Nuestro Equipo",
+      description: "Trabajamos con estudiantes talentosos y desarrolladores en:",
+      roles: [
+        "Desarrollo de productos de IA",
+        "Ingeniería backend",
+        "Operaciones de investigación",
+        "Diseño de producto y UX",
+        "Operaciones tecnológicas globales"
+      ],
+      closing: "Los pasantes contribuyen directamente a nuestros MVP.",
+      button: "Únete a Nosotros"
+    },
+  },
+  careers: {
+    title: "Bienvenidos Pasantes y Colaboradores",
+    description: "Ofrecemos experiencia práctica en IA, datos e ingeniería de software. Perfecto para estudiantes.",
+    btnApply: "Aplicar como Pasante",
+    btnStudent: "Para Estudiantes UCSD"
+  },
+  contact: {
+    tagline: "Ponte en Contacto",
+    title: "Contáctanos",
+    description: "Ya seas estudiante, investigador o inversor, nos encantaría saber de ti.",
+    emailTitle: "Envíanos un Correo",
+    emailDesc: "Para consultas generales y asociaciones.",
+    locationTitle: "Sede",
+    locationDesc: "San Diego, California",
+    socialTitle: "Conéctate en Redes Sociales",
+    socialDesc: "Sigue nuestro viaje y obtén las últimas actualizaciones.",
+    socialPlatforms: {
+      linkedin: "LinkedIn",
+      twitter: "X (Twitter)",
+      instagram: "Instagram",
+      tiktok: "TikTok",
+      youtube: "YouTube",
+      other: "Otros"
+    },
+    formTitle: "Enviar Mensaje",
+    formName: "Tu Nombre",
+    formEmail: "Correo Electrónico",
+    formSubject: "Asunto",
+    formMessage: "Mensaje",
+    formButton: "Enviar Mensaje",
+    sentTitle: "¡Mensaje Enviado!",
+    sentDesc: "Te responderemos en breve.",
+    investorTitle: "¿Inversores?",
+    investorDesc: "Síguenos en Crunchbase"
+  },
+  faq: {
+    title: "Preguntas Frecuentes",
+    items: [
+      {
+        question: "¿Cómo garantizan la privacidad de los datos?",
+        answer: "Nos adherimos estrictamente a los estándares GDPR y CCPA."
+      },
+      {
+        question: "¿Ofrecen acceso API?",
+        answer: "Actualmente estamos en beta privada."
+      },
+      {
+        question: "¿Qué tan preciso es el modelo?",
+        answer: "Nuestro sistema logra más del 98% de precisión."
+      },
+      {
+        question: "¿Puedo usar sus herramientas para investigación?",
+        answer: "Sí, ofrecemos licencias especiales."
+      },
+      {
+        question: "¿Cuál es el estado actual de la startup?",
+        answer: "Estamos en fase de prueba beta."
+      },
+      {
+        question: "¿Cuál es la visión a largo plazo?",
+        answer: "Convertirnos en el estándar global para la identidad académica verificada por IA."
+      }
+    ]
+  },
+  legalPage: {
+    title: "Información Legal",
+    updated: "Última Actualización: 28 de Noviembre de 2025",
+    sidebar: {
+      privacy: "Política de Privacidad",
+      terms: "Términos de Servicio",
+      confidentiality: "Confidencialidad"
+    },
+    privacy: {
+      title: "Política de Privacidad",
+      content: ["Consulte la versión en inglés para conocer los términos legales completos.", "Transnode AI, LLC respeta su privacidad..."]
+    },
+    terms: {
+      title: "Términos de Servicio",
+      content: ["Consulte la versión en inglés para conocer los términos legales completos.", "Gracias por su interés en Transnode AI, LLC..."]
+    },
+    confidentiality: {
+      title: "Acuerdo de Confidencialidad",
+      content: ["Consulte la versión en inglés para conocer los términos legales completos.", "1. DEFINICIÓN DE INFORMACIÓN CONFIDENCIAL..."]
+    }
+  },
+  footer: {
+    tagline: "Construyendo el futuro de la credibilidad investigadora.",
+    company: "Empresa",
+    legal: "Legal",
+    rights: "Transnode AI, LLC. Todos los derechos reservados."
+  }
 };
 
 const ko: ContentType = {
-  ...en
+  nav: {
+    focus: "핵심 분야",
+    products: "제품",
+    team: "팀",
+    contact: "문의하기"
+  },
+  hero: {
+    badge: "글로벌 임팩트를 위한 AI",
+    headlineStart: "구축",
+    headlineHighlight: "지능형 도구",
+    headlineEnd: "현대적 협업을 위한",
+    subheadline: "Transnode AI, LLC는 신뢰성을 높이고 연구를 가속화하며 워크플로를 간소화하는 국경 간 AI 제품을 개발합니다.",
+    ctaPrimary: "초기 액세스 참여",
+    ctaSecondary: "투자자 문의",
+    ctaCrowdfund: "1달러 크라우드펀딩 감사"
+  },
+  aiModels: {
+    title: "선도적인 AI 모델 기반 구축"
+  },
+  features: {
+    title: "우리의 핵심 분야",
+    items: [
+      {
+        title: "AI 검증 기술",
+        description: "컴퓨터 비전과 NLP를 활용하여 자격 증명, 기술 및 전문 경력을 높은 정확도로 검증합니다.",
+        challenge: "이력서 위조 및 검증되지 않은 기술은 기업에 막대한 비용을 초래합니다.",
+        solution: "우리의 멀티모달 AI 모델은 문서를 즉시 검증하고 실무 기술을 평가합니다."
+      },
+      {
+        title: "AI 교육",
+        description: "실시간 학생 성과 지표를 기반으로 콘텐츠 전달을 개인화하는 적응형 학습 환경을 조성합니다.",
+        challenge: "전통적인 교육 모델은 개별 학습 격차를 효과적으로 해결하지 못합니다.",
+        solution: "적응형 AI 튜터가 성과 패턴을 분석하여 맞춤형 커리큘럼을 제공합니다."
+      },
+      {
+        title: "AI 매칭",
+        description: "그래프 신경망을 활용하여 연구원, 자원 봉사자 및 조직을 최적으로 연결합니다.",
+        challenge: "적절한 인재를 적절한 기회에 연결하는 것은 수작업이 많고 비효율적입니다.",
+        solution: "딥 러닝 매칭 알고리즘은 키워드를 넘어 호환성을 분석합니다."
+      },
+      {
+        title: "AI 워크플로우 최적화",
+        description: "자율 에이전트를 사용하여 국경 간 상거래 및 학사 관리의 복잡한 운영 워크플로를 자동화합니다.",
+        challenge: "국경 간 운영은 언어 장벽과 복잡한 규정 준수로 인해 종종 지연됩니다.",
+        solution: "자율 에이전트가 번역, 일정 관리 및 규정 준수 워크플로를 처리합니다."
+      }
+    ]
+  },
+  trust: {
+    title: "신뢰하는 이유",
+    points: [
+      "캘리포니아 UCSD 동문이 설립한 미국 기반 회사",
+      "미국-중국 기술 및 연구 생태계 연결",
+      "윤리적 안전장치를 갖춘 AI 우선 제품 철학",
+      "엄격한 데이터 개인 정보 보호 및 기밀 유지 약속"
+    ],
+    nda: "모든 프로젝트 협업에는 NDA(기밀 유지 계약) 및 보안 데이터 처리 관행이 포함됩니다.",
+    collaborationTitle: "협업의 우수성",
+    collaborationBadge: "검증된 파트너십"
+  },
+  audience: {
+    title: "우리의 대상",
+    subtitle: "차세대 연구원, 전문가 및 글로벌 혁신가에게 권한 부여.",
+    items: [
+      { title: "학생", text: "연구 경험을 원하는 학부생" },
+      { title: "구직자", text: "이력서 신뢰성을 높이는 초기 경력 전문가" },
+      { title: "연구원", text: "연구 협력자를 찾는 교수 및 연구소" },
+      { title: "중소기업", text: "미국으로 확장하는 국경 간 기업" }
+    ]
+  },
+  products: {
+    label: "혁신 파이프라인",
+    title: "우리가 만들고 있는 것",
+    roadmapBtn: "로드맵 보기",
+    items: [
+      {
+        name: "USVerif",
+        tagline: "신뢰성 엔진",
+        points: ["AI 신뢰성 점수", "기술 기반 검증 과제", "개인화된 진로 통찰력"]
+      },
+      {
+        name: "Research Pipe",
+        tagline: "협업 플랫폼",
+        points: ["대학 간 매칭", "AI 워크플로우 및 연구 과제 플래너", "기밀 유지"]
+      },
+      {
+        name: "미중 전자상거래 AI 도구",
+        tagline: "시장 활성화",
+        points: ["콘텐츠 생성", "저비용 상점 설정", "시장 분석"]
+      }
+    ],
+    waitlistBtn: "대기자 명단 가입",
+    earlyAccessBtn: "현재 MVP 프레젠테이션",
+    roadmapTitle: "제품 로드맵",
+    roadmapDesc: "우리의 지능형 도구는 차세대 전문가에게 권한을 부여하도록 설계되었습니다."
+  },
+  team: {
+    hero: {
+      title: "우리 팀",
+      subheading: "창립 팀은 UC San Diego 및 Fudan University와 같은 미국 및 중국 최고의 기관에서 글로벌 관점과 학문적 배경을 제공합니다."
+    },
+    philosophy: {
+      title: "우리의 업무 방식",
+      items: [
+        {
+          title: "사용자 집착",
+          description: "우리는 실제 문제를 해결하는 제품을 만듭니다.",
+          icon: "compass"
+        },
+        {
+          title: "엔지니어링 주도",
+          description: "우리 팀은 선도적인 대학의 기술적 배경을 가지고 있습니다.",
+          icon: "rocket"
+        },
+        {
+          title: "글로벌 및 학제 간",
+          description: "우리는 미국과 중국 전역에서 운영되며 AI와 디자인 전문 지식을 결합합니다.",
+          icon: "shield"
+        }
+      ]
+    },
+    founding: {
+      title: "창립 팀",
+      intro: "창립 팀 출신:",
+      bullets: [
+        "UC San Diego (컴퓨터 공학 및 경제학)",
+        "Fudan University (컴퓨터 과학)",
+        "AI 엔지니어링 및 백엔드 시스템 경험",
+        "머신 러닝 및 국경 간 기술 제품 경험"
+      ],
+      closing: "우리는 핵심 팀을 확장하고 있습니다."
+    },
+    advisors: {
+      title: "자문 및 협력자",
+      description: "우리는 다음 분야의 연구원 및 엔지니어와 적극적으로 협력합니다:",
+      areas: [
+        "인공 지능",
+        "검증 및 규정 준수",
+        "연구 방법론",
+        "국경 간 운영",
+        "UI/UX 및 제품 전략"
+      ],
+      closing: "이 네트워크는 아이디어를 빠르게 검증하는 데 도움이 됩니다."
+    },
+    opportunities: {
+      title: "팀에 합류하세요",
+      description: "우리는 재능 있는 학생들과 함께 다음 분야에서 일합니다:",
+      roles: [
+        "AI 제품 개발",
+        "백엔드 엔지니어링",
+        "연구 운영",
+        "제품 디자인 및 UX",
+        "글로벌 기술 운영"
+      ],
+      closing: "인턴은 MVP에 직접 기여합니다.",
+      button: "함께하기"
+    }
+  },
+  careers: {
+    title: "인턴 및 기여자 환영",
+    description: "AI, 데이터, 소프트웨어 엔지니어링 실무 경험을 제공합니다.",
+    btnApply: "인턴 지원",
+    btnStudent: "UCSD 학생용"
+  },
+  contact: {
+    tagline: "연락하기",
+    title: "문의하기",
+    description: "학생, 연구원, 투자자 모두의 연락을 환영합니다.",
+    emailTitle: "이메일 보내기",
+    emailDesc: "일반 문의 및 제휴.",
+    locationTitle: "본사",
+    locationDesc: "캘리포니아 샌디에이고",
+    socialTitle: "소셜 미디어 연결",
+    socialDesc: "우리의 여정을 팔로우하고 최신 업데이트를 받으세요.",
+    socialPlatforms: {
+      linkedin: "LinkedIn",
+      twitter: "X (Twitter)",
+      instagram: "Instagram",
+      tiktok: "TikTok",
+      youtube: "YouTube",
+      other: "기타"
+    },
+    formTitle: "메시지 보내기",
+    formName: "이름",
+    formEmail: "이메일 주소",
+    formSubject: "제목",
+    formMessage: "메시지",
+    formButton: "메시지 보내기",
+    sentTitle: "메시지 전송됨!",
+    sentDesc: "곧 답변 드리겠습니다.",
+    investorTitle: "투자자?",
+    investorDesc: "Crunchbase에서 팔로우"
+  },
+  faq: {
+    title: "자주 묻는 질문",
+    items: [
+      {
+        question: "데이터 개인 정보 보호는 어떻게 보장합니까?",
+        answer: "우리는 GDPR 및 CCPA 표준을 엄격히 준수합니다."
+      },
+      {
+        question: "API 액세스를 제공합니까?",
+        answer: "현재 비공개 베타 버전입니다."
+      },
+      {
+        question: "모델의 정확도는 얼마나 됩니까?",
+        answer: "우리의 시스템은 98% 이상의 정확도를 달성합니다."
+      },
+      {
+        question: "학술 연구에 도구를 사용할 수 있습니까?",
+        answer: "예, 특별 라이선스를 제공합니다."
+      },
+      {
+        question: "스타트업의 현재 상태는 어떠합니까?",
+        answer: "우리는 현재 베타 테스트 단계에 있습니다."
+      },
+      {
+        question: "장기적인 비전은 무엇입니까?",
+        answer: "AI 검증 학술 및 전문 신원의 글로벌 표준이 되는 것입니다."
+      }
+    ]
+  },
+  legalPage: {
+    title: "법적 정보",
+    updated: "마지막 업데이트: 2025년 11월 28일",
+    sidebar: {
+      privacy: "개인 정보 보호 정책",
+      terms: "서비스 약관",
+      confidentiality: "기밀 유지"
+    },
+    privacy: {
+      title: "개인 정보 보호 정책",
+      content: ["전체 법적 구속력이 있는 조항은 영문 버전을 참조하십시오.", "Transnode AI, LLC는 귀하의 개인 정보를 존중합니다..."]
+    },
+    terms: {
+      title: "서비스 약관",
+      content: ["전체 법적 구속력이 있는 조항은 영문 버전을 참조하십시오.", "Transnode AI, LLC에 관심을 가져 주셔서 감사합니다..."]
+    },
+    confidentiality: {
+      title: "기밀 유지 및 보안 계약",
+      content: ["전체 법적 구속력이 있는 조항은 영문 버전을 참조하십시오.", "1. 기밀 정보의 정의..."]
+    }
+  },
+  footer: {
+    tagline: "지능형 시스템을 통한 연구 및 경력 신뢰성의 미래 구축.",
+    company: "회사",
+    legal: "법적",
+    rights: "Transnode AI, LLC. 판권 소유."
+  }
 };
 
 export const translations = { en, zh, es, ko };
