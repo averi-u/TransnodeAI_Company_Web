@@ -13,7 +13,7 @@ const AIModels: React.FC = () => {
             <p className="text-center text-xs font-bold text-slate-400 tracking-[0.2em] uppercase mb-8">
               Partner With
             </p>
-            <div className="flex justify-center items-center grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
                {/* IBM Startup Partner Plus */}
                <a href="https://www.ibm.com/partnerplus" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 transition-transform hover:scale-105 group">
                  <img 
@@ -24,6 +24,19 @@ const AIModels: React.FC = () => {
                  <div className="flex flex-col text-[11px] font-bold text-slate-700 leading-tight uppercase tracking-wide text-left group-hover:text-[#0530ad] transition-colors">
                    <span>Startup</span>
                    <span>Partner Plus</span>
+                 </div>
+               </a>
+
+               {/* Notion for Startups */}
+               <a href="https://www.notion.so/startups" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 transition-transform hover:scale-105 group">
+                 <img 
+                   src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg" 
+                   alt="Notion" 
+                   className="h-8 md:h-10 w-auto" 
+                 />
+                 <div className="flex flex-col text-[11px] font-bold text-slate-700 leading-tight uppercase tracking-wide text-left group-hover:text-black transition-colors">
+                   <span>Notion for</span>
+                   <span>Startups</span>
                  </div>
                </a>
             </div>
