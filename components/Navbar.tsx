@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Cpu } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
+import TransnodeLogo from './Transnode_logo.jpg';
 
 // Define the available views
 export type ViewState = 'home' | 'team' | 'focus' | 'products' | 'contact' | 'legal';
@@ -59,14 +60,21 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <a href="#" onClick={handleLogoClick} className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 shrink-0 rounded-lg overflow-hidden border border-white/10 shadow-sm bg-white flex items-center justify-center text-[#0A2540]">
-             <Cpu size={24} />
+          <div className="w-10 h-10 shrink-0 rounded-lg overflow-hidden border border-white/5 shadow-sm bg-white flex items-center justify-center text-[#0A2540]">
+            <img 
+              src="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo.JPG" 
+              alt="Transnode Logo" 
+              className="w-full h-full object-contain p-0.5" 
+            />
           </div>
           <span className="text-lg md:text-xl font-bold tracking-tight text-white group-hover:text-teal-400 transition-colors flex items-center gap-1.5">
             Transnode
             <span className="font-light text-teal-400">AI, LLC</span>
           </span>
         </a>
+        
+
+
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-8 items-center">
