@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Cpu } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
-import TransnodeLogo from 'assets/Transnode_logo1.png';
-
-
 
 // Define the available views
 export type ViewState = 'home' | 'team' | 'focus' | 'products' | 'contact' | 'legal';
