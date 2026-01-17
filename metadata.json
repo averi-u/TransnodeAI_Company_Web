@@ -1,5 +1,8 @@
 {
-  "name": "Transnode AI Company Web",
-  "description": "Minimalist landing page for Transnode AI, LLC featuring a modern deep blue and teal aesthetic.",
-  "requestFramePermissions": []
+  "name": "Transnode AI, LLC - Landing Page",
+  "description": "The official landing page for Transnode AI, LLC, featuring AI verification tech, adaptive education, and research collaboration tools.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
 }
