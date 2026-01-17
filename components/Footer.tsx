@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLanguage } from './LanguageContext';
 import { Language } from '../translations';
@@ -36,6 +37,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="text-sm">
              <span className="block">{content.contact.locationDesc}</span>
              <a href="mailto:contact@transnode.ai" className="text-teal-400 hover:underline">contact@transnode.ai</a>
+          </div>
+          
+          {/* BBB Seal for Desktop/Tablet */}
+          <div className="mt-6 hidden md:block">
+            <a href="https://www.bbb.org/us/ca/san-diego/profile/computer-software/transnode-ai-1126-1000160321/#sealclick" target="_blank" rel="nofollow">
+              <img src="https://seal-central-northern-western-arizona.bbb.org/seals/blue-seal-293-61-whitetxt-bbb-1000160321.png" style={{ border: 0 }} alt="Transnode AI BBB Business Review" className="opacity-80 hover:opacity-100 transition-opacity max-h-[52px] w-auto" />
+            </a>
           </div>
         </div>
         
@@ -82,10 +90,18 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* Language Switcher */}
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="text-sm text-center md:text-left">
-          © {new Date().getFullYear()} {content.footer.rights}
+      {/* Language Switcher & Copyright & Mobile BBB */}
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="flex flex-col items-center md:items-start gap-4">
+          <div className="text-sm text-center md:text-left">
+            © {new Date().getFullYear()} {content.footer.rights}
+          </div>
+          {/* BBB Seal for Mobile */}
+          <div className="md:hidden">
+            <a href="https://www.bbb.org/us/ca/san-diego/profile/computer-software/transnode-ai-1126-1000160321/#sealclick" target="_blank" rel="nofollow">
+              <img src="https://seal-central-northern-western-arizona.bbb.org/seals/blue-seal-293-61-whitetxt-bbb-1000160321.png" style={{ border: 0 }} alt="Transnode AI BBB Business Review" className="opacity-80 max-h-[48px] w-auto" />
+            </a>
+          </div>
         </div>
         
         <div className="flex items-center gap-2 bg-slate-800 p-1 rounded-lg">

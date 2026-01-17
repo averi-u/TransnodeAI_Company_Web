@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
@@ -37,29 +38,18 @@ const ThreeBackground: React.FC = () => {
     const color3 = new THREE.Color(0xffffff); // White highlight
 
     for (let i = 0; i < particleCount; i++) {
-        // Create a shaped cloud. A sphere is good, but let's deform it slightly to look more organic.
         const u = Math.random();
         const v = Math.random();
         const theta = 2 * Math.PI * u;
         const phi = Math.acos(2 * v - 1);
         
-        // Base sphere
         let r = 15 + Math.random() * 2; 
         
-        // Add some noise/lobes to hint at a brain structure
-        // Squeeze x slightly?
-        // r += Math.sin(theta * 5) * 0.5;
-
         let x = r * Math.sin(phi) * Math.cos(theta);
         let y = r * Math.sin(phi) * Math.sin(theta);
         let z = r * Math.cos(phi);
 
-        // Flatten slightly to look like a brain (two lobes?)
-        // Let's just keep it a "Cybernetic Core" (Sphere) as it fits the "Global" theme better.
-        // Maybe add a second layer inside.
-        
         if (i % 3 === 0) {
-            // Core particles
             const coreR = 8 + Math.random() * 4;
             x = coreR * Math.sin(phi) * Math.cos(theta);
             y = coreR * Math.sin(phi) * Math.sin(theta);
@@ -70,10 +60,8 @@ const ThreeBackground: React.FC = () => {
         positions[i * 3 + 1] = y;
         positions[i * 3 + 2] = z;
 
-        // Color gradient based on position
         const mixedColor = color1.clone().lerp(color2, (y / r + 1) / 2);
         
-        // Random white sparks - reduced probability to avoid "flashing"
         if (Math.random() > 0.98) {
              mixedColor.lerp(color3, 0.8);
              sizes[i] = 1.5;
@@ -93,11 +81,11 @@ const ThreeBackground: React.FC = () => {
     // Custom shader material for round glowing particles
     const vertexShader = `
       attribute float size;
+      attribute vec3 color;
       varying vec3 vColor;
       void main() {
         vColor = color;
         vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-        // Increased size multiplier slightly to make particles softer
         gl_PointSize = size * (400.0 / -mvPosition.z);
         gl_Position = projectionMatrix * mvPosition;
       }
@@ -120,14 +108,14 @@ const ThreeBackground: React.FC = () => {
       fragmentShader,
       transparent: true,
       depthWrite: false,
-      blending: THREE.AdditiveBlending
+      blending: THREE.AdditiveBlending,
+      vertexColors: true
     });
 
     const particles = new THREE.Points(geometry, material);
     group.add(particles);
 
     // 2. Connecting Lines (Subtle Network)
-    // We use a wireframe geometry to simulate connections without calculating them every frame
     const connectionsGeo = new THREE.IcosahedronGeometry(15, 2);
     const connectionsMat = new THREE.LineBasicMaterial({ 
         color: 0x2EE5AC, 
@@ -136,11 +124,10 @@ const ThreeBackground: React.FC = () => {
         blending: THREE.AdditiveBlending
     });
     const connections = new THREE.LineSegments(new THREE.WireframeGeometry(connectionsGeo), connectionsMat);
-    // Scale it slightly up
     connections.scale.set(1.05, 1.05, 1.05);
     group.add(connections);
     
-    // 3. Floating Rings (Data streams)
+    // 3. Floating Rings
     const ringGeo = new THREE.TorusGeometry(22, 0.1, 16, 100);
     const ringMat = new THREE.MeshBasicMaterial({ color: 0x0088ff, transparent: true, opacity: 0.15 });
     const ring1 = new THREE.Mesh(ringGeo, ringMat);
@@ -159,7 +146,6 @@ const ThreeBackground: React.FC = () => {
     const targetRotation = new THREE.Vector2();
     
     const onMouseMove = (event: MouseEvent) => {
-      // Normalize mouse -1 to 1
       mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
       mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
     };
@@ -172,25 +158,20 @@ const ThreeBackground: React.FC = () => {
 
       const time = Date.now() * 0.001;
 
-      // Smooth follow mouse for rotation
-      targetRotation.x = mouse.y * 0.3; // Reduced sensitivity
+      targetRotation.x = mouse.y * 0.3;
       targetRotation.y = mouse.x * 0.3;
       
       group.rotation.x += (targetRotation.x - group.rotation.x) * 0.05;
       group.rotation.y += (targetRotation.y - group.rotation.y) * 0.05;
 
-      // Reduced constant spin speed significantly
       group.rotation.y += 0.0005;
 
-      // Slower pulse
       const scale = 1 + Math.sin(time * 0.3) * 0.02;
       group.scale.set(scale, scale, scale);
       
-      // Animate rings independently (slower)
       ring1.rotation.z += 0.0005;
       ring2.rotation.z -= 0.001;
 
-      // Gentle floating motion
       group.position.y = Math.sin(time * 0.8) * 0.5;
 
       renderer.render(scene, camera);
@@ -198,7 +179,6 @@ const ThreeBackground: React.FC = () => {
 
     animate();
 
-    // --- Resize ---
     const handleResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();

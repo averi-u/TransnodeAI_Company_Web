@@ -1,8 +1,25 @@
-import React from 'react';
+
+import React, { useEffect } from 'react';
 import { useLanguage } from './LanguageContext';
 
 const AIModels: React.FC = () => {
   const { content } = useLanguage();
+
+  useEffect(() => {
+    // Inject the BBB legacy script for the dynamic badge functionality
+    const script = document.createElement('script');
+    script.src = "https://seal-central-northern-western-arizona.bbb.org/inc/legacy.js";
+    script.type = "text/javascript";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Clean up script on unmount if necessary
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <section className="py-12 border-b border-slate-100 bg-white">
@@ -13,7 +30,7 @@ const AIModels: React.FC = () => {
             <p className="text-center text-xs font-bold text-slate-400 tracking-[0.2em] uppercase mb-8">
               Partner With
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
                {/* IBM Startup Partner Plus */}
                <a href="https://www.ibm.com/partnerplus" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 transition-transform hover:scale-105 group">
                  <img 
@@ -38,6 +55,16 @@ const AIModels: React.FC = () => {
                    <span>Notion for</span>
                    <span>Startups</span>
                  </div>
+               </a>
+
+               {/* BBB Badge - Moved to the right-most position */}
+               <a href="https://www.bbb.org/us/ca/san-diego/profile/computer-software/transnode-ai-1126-1000160321/#sealclick" id="bbblink" className="ruhzbum transition-transform hover:scale-105" target="_blank" rel="nofollow">
+                 <img 
+                   src="https://seal-central-northern-western-arizona.bbb.org/seals/blue-seal-69-145-bbb-1000160321.png" 
+                   style={{ border: 0 }} 
+                   alt="Transnode AI BBB Business Review" 
+                   className="h-16 md:h-20 w-auto"
+                 />
                </a>
             </div>
         </div>
