@@ -79,9 +79,10 @@ const ThreeBackground: React.FC = () => {
     geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
 
     // Custom shader material for round glowing particles
+    // Note: 'color' and 'position' attributes are automatically prepended by Three.js
+    // when using ShaderMaterial with vertexColors: true.
     const vertexShader = `
       attribute float size;
-      attribute vec3 color;
       varying vec3 vColor;
       void main() {
         vColor = color;
