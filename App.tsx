@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Navbar, { ViewState } from './components/Navbar';
 import Hero from './components/Hero';
@@ -34,6 +35,10 @@ const AppContent: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
+  const handleQuoteClick = () => {
+    handleNavigate('contact');
+  };
+
   const renderContent = () => {
     switch (currentView) {
       case 'team':
@@ -51,7 +56,10 @@ const AppContent: React.FC = () => {
       case 'products':
         return (
           <div className="pt-24 min-h-screen bg-slate-50">
-            <ProductsPage onJoinWaitlistClick={() => setIsWaitlistOpen(true)} />
+            <ProductsPage 
+              onJoinWaitlistClick={() => setIsWaitlistOpen(true)} 
+              onQuoteClick={handleQuoteClick}
+            />
           </div>
         );
       case 'contact':
@@ -79,7 +87,10 @@ const AppContent: React.FC = () => {
             <Trust />
             <AIModels />
             <Audience />
-            <Products onJoinWaitlistClick={() => setIsWaitlistOpen(true)} />
+            <Products 
+              onJoinWaitlistClick={() => setIsWaitlistOpen(true)} 
+              onQuoteClick={handleQuoteClick}
+            />
             <Careers />
           </>
         );

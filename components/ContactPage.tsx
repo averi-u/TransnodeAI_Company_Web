@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Mail, Linkedin, Instagram, MapPin, TrendingUp, Send, User, MessageSquare, Loader2, Youtube } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
@@ -98,7 +99,7 @@ const ContactPage: React.FC = () => {
 
                     <a 
                       href="https://www.instagram.com/transnode.ai?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" 
-                      target="_blank"
+                      target="_blank" 
                       rel="noreferrer"
                       className="flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-200 hover:border-pink-500 hover:text-pink-600 transition-all group shadow-sm"
                     >
@@ -236,7 +237,8 @@ const ContactPage: React.FC = () => {
                                     <option>General Inquiry</option>
                                     <option>Partnership Proposal</option>
                                     <option>Career Opportunity</option>
-                                    <option>Product Demo</option>
+                                    <option>Request a Quote for Web Dev</option>
+                                    <option>Request Pitch Deck or Product Demo</option>
                                     <option>Other</option>
                                  </select>
                                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">

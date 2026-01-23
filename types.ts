@@ -1,3 +1,4 @@
+
 import { LucideIcon } from "lucide-react";
 
 export interface FeatureItem {
@@ -16,10 +17,10 @@ export interface ProductDetail {
   name: string;
   tagline: string;
   points: string[];
+  isService?: boolean;
 }
 
 export interface NavLink {
   label: string;
   href: string;
 }
-

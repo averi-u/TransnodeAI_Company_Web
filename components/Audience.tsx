@@ -1,12 +1,13 @@
+
 import React from 'react';
 import { useLanguage } from './LanguageContext';
-import { UserCheck, Zap, Network, Globe } from 'lucide-react';
+import { UserCheck, Zap, Users, Globe } from 'lucide-react';
 
 const Audience: React.FC = () => {
   const { content } = useLanguage();
   
   // Icon mapping matching the order in translations file
-  const icons = [UserCheck, Zap, Network, Globe];
+  const icons = [UserCheck, Zap, Users, Globe];
 
   return (
     <section className="py-24 bg-[#0A2540] text-white">

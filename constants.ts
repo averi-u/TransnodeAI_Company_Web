@@ -1,4 +1,5 @@
-import { ShieldCheck, BookOpen, Globe, UserCheck, Network, Zap } from "lucide-react";
+
+import { ShieldCheck, BookOpen, Globe, UserCheck, Network, Zap, Layers, Users } from "lucide-react";
 import { FeatureItem, ProductDetail, TrustPoint } from "./types";
 
 export const NAV_LINKS = [
@@ -31,11 +32,11 @@ export const FEATURES: FeatureItem[] = [
     solution: "Adaptive AI tutors analyze performance patterns to provide personalized curriculum adjustments and targeted remediation in real-time."
   },
   {
-    title: "AI Matching",
-    description: "Utilizing graph neural networks to optimally pair researchers, volunteers, and organizations for high-impact collaborations.",
-    icon: Network,
-    challenge: "Connecting the right talent to the right opportunity is manually intensive, inefficient, and often prone to unconscious bias.",
-    solution: "Deep learning matching algorithms analyze compatibility beyond keywords, considering potential synergy and complementary skill sets."
+    title: "AI Integrations",
+    description: "We leverage cutting-edge AI integrations and multi-modal models to ensure rapid delivery, seamless interoperability, and high-performance solutions.",
+    icon: Layers,
+    challenge: "Fragmented systems and outdated architectures slow down development cycles and prevent real-time data intelligence.",
+    solution: "Integrating state-of-the-art LLMs and vision models through a unified pipeline to accelerate time-to-market and operational speed."
   },
   {
     title: "AI Workflow Optimization",
@@ -56,7 +57,7 @@ export const TRUST_POINTS: TrustPoint[] = [
 export const TARGET_AUDIENCE = [
   { title: "Students", text: "Undergraduate students seeking research experience", icon: UserCheck },
   { title: "Job Seekers", text: "Early career professionals improving resume credibility", icon: Zap },
-  { title: "Researchers", text: "Professors & labs looking for research collaborators", icon: Network },
+  { title: "HR Professionals", text: "Streamlining recruitment with AI-verified candidate credentials", icon: Users },
   { title: "SMEs", text: "Cross-border businesses expanding into the U.S.", icon: Globe },
 ];
 
@@ -71,21 +72,23 @@ export const PRODUCTS: ProductDetail[] = [
     ]
   },
   {
-    name: "Research Pipe",
-    tagline: "Collaboration Platform",
-    points: [
-      "Cross-university matching",
-      "AI workflow & research task planner",
-      "Confidentiality + collaboration pipeline"
-    ]
-  },
-  {
     name: "US-China E-Commerce AI Tools",
     tagline: "Market Enablement",
     points: [
       "Content generation",
       "Low-cost storefront setup",
       "Market analytics"
+    ]
+  },
+  {
+    name: "Web Development Service & Digital Solutions",
+    tagline: "Business Growth",
+    isService: true,
+    points: [
+      "Shopify",
+      "B2B landing page",
+      "local business",
+      "Website Marketing Services"
     ]
   }
 ];

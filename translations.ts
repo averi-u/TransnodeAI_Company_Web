@@ -1,4 +1,5 @@
-import { ShieldCheck, BookOpen, Globe, UserCheck, Network, Lock, Zap } from "lucide-react";
+
+import { ShieldCheck, BookOpen, Globe, UserCheck, Network, Lock, Zap, Layers } from "lucide-react";
 
 export type Language = 'en' | 'zh' | 'es' | 'ko';
 
@@ -53,6 +54,7 @@ export interface ContentType {
       points: string[];
     }[];
     waitlistBtn: string;
+    quoteBtn: string;
     earlyAccessBtn: string;
     roadmapTitle: string;
     roadmapDesc: string;
@@ -197,10 +199,10 @@ const en: ContentType = {
         solution: "Adaptive AI tutors analyze performance patterns to provide personalized curriculum."
       },
       {
-        title: "AI Matching",
-        description: "Utilizing graph neural networks to optimally pair researchers, volunteers, and organizations for high-impact collaborations.",
-        challenge: "Connecting the right talent to the right opportunity is manually intensive.",
-        solution: "Deep learning matching algorithms analyze compatibility beyond keywords."
+        title: "AI Integrations",
+        description: "We use current cutting-edge AI integrations and multi-modal models to provide fastest delivery and high-performance technical solutions.",
+        challenge: "Fragmented systems and outdated architectures slow down development cycles and prevent real-time intelligence.",
+        solution: "Integrating state-of-the-art LLMs and vision models to accelerate time-to-market and operational speed."
       },
       {
         title: "AI Workflow Optimization",
@@ -228,7 +230,7 @@ const en: ContentType = {
     items: [
       { title: "Students", text: "Undergraduate students seeking research experience" },
       { title: "Job Seekers", text: "Early career professionals improving resume credibility" },
-      { title: "Researchers", text: "Professors & labs looking for research collaborators" },
+      { title: "HR Professionals", text: "Streamlining recruitment with AI-verified candidate credentials" },
       { title: "SMEs", text: "Cross-border businesses expanding into the U.S." }
     ]
   },
@@ -243,17 +245,18 @@ const en: ContentType = {
         points: ["AI credibility scoring", "Skill-based verification tasks", "Personalized career insight"]
       },
       {
-        name: "Research Pipe",
-        tagline: "Collaboration Platform",
-        points: ["Cross-university matching", "AI workflow & research task planner", "Confidentiality + collaboration pipeline"]
-      },
-      {
         name: "US-China E-Commerce AI Tools",
         tagline: "Market Enablement",
         points: ["Content generation", "Low-cost storefront setup", "Market analytics"]
+      },
+      {
+        name: "Web Development Service & Digital Solutions",
+        tagline: "Business Growth",
+        points: ["Shopify", "B2B landing page", "local business", "Website Marketing Services"]
       }
     ],
     waitlistBtn: "Join Waitlist",
+    quoteBtn: "Request a Quote",
     earlyAccessBtn: "Current MVP Presentation",
     roadmapTitle: "Product Roadmap",
     roadmapDesc: "Our intelligent tools are designed to empower the next generation of professionals with verification, collaboration, and market access."
@@ -292,7 +295,7 @@ const en: ContentType = {
         "Experience in AI engineering, backend systems, product development, and research workflows",
         "Previously worked on machine learning, distributed systems, user research, and cross-border tech products"
       ],
-      closing: "We are expanding our core team as we develop USVerif and ResearchPipe."
+      closing: "We are expanding our core team as we develop USVerif and our broader product ecosystem."
     },
     advisors: {
       title: "Advisors & Collaborators",
@@ -397,16 +400,16 @@ const en: ContentType = {
       content: [
         "TRANSNODE AI, LLC PRIVACY POLICY",
         "1. INTRODUCTION",
-        "Transnode AI, LLC ('Transnode', 'we', 'us', or 'our') respects your privacy and is committed to protecting your personal data. This Privacy Policy informs you of our policies regarding the collection, use, and disclosure of personal data when you use our website, transnode.ai, and our associated products including USVerif, Research Pipe, and AI Edu (collectively, the 'Services'). By accessing or using our Services, you agree to the collection and use of information in accordance with this policy.",
+        "Transnode AI, LLC ('Transnode', 'we', 'us', or 'our') respects your privacy and is committed to protecting your personal data. This Privacy Policy informs you of our policies regarding the collection, use, and disclosure of personal data when you use our website, transnode.ai, and our associated products including USVerif and AI Edu (collectively, the 'Services'). By accessing or using our Services, you agree to the collection and use of information in accordance with this policy.",
         "2. INFORMATION WE COLLECT",
         "We collect several different types of information for various purposes to provide and improve our Services to you:",
         "a. Personal Identification Information: When you register for our Services, request information, or subscribe to our materials, we may ask you to provide certain personally identifiable information, including but not limited to: Email address, First and last name, Phone number, Address, State, Province, ZIP/Postal code, City.",
         "b. Verification Data (USVerif): To provide credibility and verification services, we may collect and process sensitive information such as government-issued identification documents, academic transcripts, professional certifications, and biometric data (specifically facial scans for identity matching). This data is processed strictly for the purpose of verification and is handled with the highest level of security.",
-        "c. Academic and Research Data (Research Pipe & AI Edu): We collect information regarding your research interests, academic history, publication records, and institutional affiliations to facilitate accurate matching and collaboration recommendations.",
+        "c. Academic and Career Data (AI Edu): We collect information regarding your learning interests, academic history, and goals to facilitate accurate matching and personalized learning paths.",
         "d. Usage Data: We may also collect information on how the Service is accessed and used ('Usage Data'). This Usage Data may include information such as your computer's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers, and other diagnostic data.",
         "3. HOW WE USE YOUR INFORMATION",
         "Transnode AI, LLC uses the collected data for the following purposes:",
-        "• To provide and maintain our Services, including the verification of credentials and facilitation of research collaborations.",
+        "• To provide and maintain our Services, including the verification of credentials and facilitation of learning tools.",
         "• To notify you about changes to our Services.",
         "• To allow you to participate in interactive features of our Services when you choose to do so.",
         "• To provide customer support and respond to your inquiries.",
@@ -439,25 +442,25 @@ const en: ContentType = {
         "If you have any questions about this Privacy Policy, please contact us by email: legal@transnode.ai."
       ]
     },
+    // Fix: Adding the missing 'terms' property to en.legalPage to match ContentType interface
     terms: {
       title: "Terms of Service",
       content: [
-        "Thanks for your interest in Transnode AI, LLC (“Transnode,” “we,” or “us”) and our website transnode.ai, as well as our related websites (collectively, our “Site”). These terms and conditions, together with Transnode’s Privacy Policy (together, these “Terms”), govern your access to and use of the Site, so please read everything carefully. These Terms expressly do not govern your access to or use of Transnode’s Software Platform or Services, which are subject to the Transnode Master Software and Services Agreement, the Transnode End User Terms and Conditions, or other written agreement in place between you and Transnode.",
-        "BY CLICKING “AGREE,” OR BY OTHERWISE ACCESSING OR USING THE SITE, you are agreeing to be bound by these Terms, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you are an entity, organization, or company, the individual accepting these Terms on your behalf represents and warrants that they have the authority to bind you to these Terms and you agree to be bound by these Terms. If you do not agree with any of the terms in these Terms, you are prohibited from using or accessing the Site.",
-        "1. Use License: Subject to your complete and ongoing compliance with these Terms, Transnode hereby grants you a non-exclusive, non-transferable, non-sublicensable, revocable, worldwide right to (a) access and use the Site, solely with supported browsers through the Internet for your own internal purposes. You may not permit the Site to be used by or for the benefit of unauthorized third parties. Nothing in these Terms will be construed to grant you any right to transfer or assign rights to access or use the Site. All rights not expressly granted to you are reserved by Transnode and its licensors. You may not (i) modify or make derivative works based upon the Sites; (ii) reverse engineer the Site or access the Sites in order to (a) build a competitive product or service, or (b) build a product using similar features, functions, or graphics of the Sites, or (c) copy any features, functions, or graphics of the Sites. You further acknowledge and agree that, as between the parties, Transnode owns all right, title, and interest in and to the Sites, including the visual interfaces, graphics, design, compilation, information, data, computer code (including source code or object code), products, software, services, and all other elements of the Site, and all intellectual property rights therein.",
-        "2. Feedback: If you choose to provide input and suggestions regarding problems with or proposed modifications or improvements to the Site (“Feedback”), then you hereby grant Transnode an unrestricted, perpetual, irrevocable, non-exclusive, fully paid, royalty-free right to exploit the Feedback in any manner and for any purpose, including to improve the Sites and create other products and services.",
-        "3. Third Party Software: The Site may include or incorporate third party software components that are generally available free of charge under licenses granting recipients broad rights to copy, modify, and distribute those components (“Third Party Components”). Although the Site is provided to you subject to these Terms, nothing in these Terms prevents, restricts, or is intended to prevent or restrict you from obtaining Third Party Components under the applicable third-party licenses or to limit your use of the Third Party Components under those third party licenses. The Site may also contain links to third party websites. Such linked websites are not under Transnode’s control, and Transnode is not responsible for their content.",
-        "4. Monitoring Content: Transnode does not control and does not have any obligation to monitor any content made available by third parties or the use of the Site by its users. You acknowledge and agree that Transnode reserves the right to, and may from time to time, monitor any and all information transmitted or received through the Site for operational or other purposes. If at any time Transnode chooses to monitor the content, Transnode still assumes no responsibility or liability for content or any loss or damage incurred as a result of the use of content. During monitoring, information may be examined, recorded, copied, and used in accordance with our Privacy Policy.",
-        "5. Term and Termination: These Terms are effective beginning when you accept these Terms or first access or use the Site, and ending when terminated as described below. If you violate any provision of these Terms, your authorization to access the Site and these Terms automatically terminate. In addition, Transnode may, at its sole discretion, terminate these Terms or suspend or terminate your access to the Site, at any time for any reason or no reason, with or without notice. You may terminate these Terms at any time by emailing legal@transnode.ai. Upon termination of these Terms: (a) your license rights will terminate and you must immediately cease all use of the Site. Sections 2, 6, 7, 8, and 10 will survive.",
-        "6. Indemnification: To the fullest extent permitted by law, you agree to defend, hold harmless and indemnify Transnode and its officers, directors, employees, consultants, affiliates, subsidiaries and agents (together, the “Transnode Entities”) from and against any and all claims brought by a third party, and any related losses, costs, expenses, damages or other liabilities incurred arising from or related to: (a) your unauthorized use of, or misuse of, the Sites; (b) your breach of any provision of these Terms; (c) your violation of any applicable law or regulation; (d) your violation of any third party right, including any intellectual property right or publicity, confidentiality, other property, or privacy right; or (e) any dispute or issue between you and any third party. Any such indemnification will be conditioned on our notifying you in writing of any such claim, demand, action, cost, liability, loss or threat of any thereof. We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by (without limiting your indemnification obligations with respect to that matter), and in that case, you agree to cooperate with our defense of those claims. We reserve the right to report any wrongdoing of which we become aware to the applicable government agencies or otherwise.",
-        "7. Disclaimer: THE SITE AND ALL MATERIALS AND CONTENT ON AND AVAILABLE THROUGH THE SITE ARE PROVIDED “AS IS” AND ON AN “AS AVAILABLE” BASIS. Transnode makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, non-infringement of intellectual property or other violation of rights, and any warranty arising out of course of dealing, usage, or trade. Transnode does not warrant that the Site or any portion of the Site, or any materials or content offered through the Site, are accurate, complete, or current, or will be uninterrupted, secure, or free of errors, viruses, or other harmful components; and Transnode does not warrant that any of those issues will be corrected. Transnode may make changes to the Sites at any time without notice, including by limiting or discontinuing certain features of the Sites. Transnode does not, however, make any commitment to update the Sites. Transnode will have no liability for any change to the Site or any suspension or termination of your access to or use of the Site.",
-        "THE LIMITATIONS, EXCLUSIONS, AND DISCLAIMS IN THIS SECTION APPLY TO THE FULLEST EXTENT PERMITTED BY LAW. Transnode does not disclaim any warranty or other right that Transnode is prohibited from disclaiming under applicable law.",
-        "8. Limitations of Liability: TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT WILL TRANSNODE OR ITS SUPPLIERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF DATA OR PROFIT, OR DUE TO BUSINESS INTERRUPTION,) ARISING OUT OF THE USE OR INABILITY TO USE THE SITE OR THE MATERIALS ON THE SITE, EVEN IF TRANSNODE OR A TRANSNODE AUTHORIZED REPRESENTATIVE HAS BEEN NOTIFIED ORALLY OR IN WRITING OF THE POSSIBILITY OF SUCH DAMAGE. TO THE FULLEST EXTENT PERMITTED BY LAW, THE AGGREGATE LIABILITY OF TRANSNODE AND ITS SUPPLIERS TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THE USE OF OR INABILITY TO USE ANY PORTION OF THE SITE OR OTHERWISE UNDER THESE TERMS, WHETHER IN CONTRACT, TORT, OR OTHERWISE, IS LIMITED TO $100. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.",
-        "Each provision of these Terms that provides for a limitation of liability, disclaimer of warranties, or exclusion of damages is intended to and does allocate the risks between the parties under these Terms. This allocation is an essential element of the basis of the bargain between the parties. Each of these provisions is severable and independent of all other provisions of these Terms. The limitations in this Section 8 will apply even if any limited remedy fails of its essential purpose.",
-        "9. Modifications: Transnode may revise these Terms at any time without notice; provided that, if we make any material changes to these Terms, we will use commercially reasonable efforts to notify you. By continuing to use the Site, you are agreeing to be bound by the then current version of these Terms.",
-        "10. Governing Law: Any claim relating to the Sites or these Terms will be governed by the laws of the State of California without regard to its conflict of law provisions.",
-        "11. Support: We are under no obligation to provide support for the Site. In instances where we may offer support, the support will be subject to published policies.",
-        "12. Contact Information: You may contact us by emailing us at legal@transnode.ai."
+        "TRANSNODE AI, LLC TERMS OF SERVICE",
+        "1. ACCEPTANCE OF TERMS",
+        "By accessing or using our Services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our Services.",
+        "2. DESCRIPTION OF SERVICES",
+        "Transnode AI, LLC provides various AI-driven tools and services including USVerif and AI Edu. We reserve the right to modify or discontinue any part of the Service at any time.",
+        "3. USER OBLIGATIONS",
+        "You agree to use the Services only for lawful purposes and in a manner that does not infringe the rights of others. You are responsible for maintaining the confidentiality of your account credentials.",
+        "4. INTELLECTUAL PROPERTY",
+        "The content, features, and functionality of the Services are owned by Transnode AI, LLC and are protected by international copyright, trademark, and other intellectual property laws.",
+        "5. LIMITATION OF LIABILITY",
+        "Transnode AI, LLC shall not be liable for any indirect, incidental, or consequential damages arising out of your use or inability to use the Services.",
+        "6. CHANGES TO TERMS",
+        "We reserve the right to update these Terms at any time. Your continued use of the Services after such changes constitutes acceptance of the new Terms.",
+        "7. CONTACT",
+        "For questions regarding these Terms, please contact legal@transnode.ai."
       ]
     },
     confidentiality: {
@@ -465,11 +468,11 @@ const en: ContentType = {
       content: [
         "1. DEFINITION OF CONFIDENTIAL INFORMATION",
         "'Confidential Information' means all non-public information disclosed by Transnode AI, LLC ('Disclosing Party') to the user or partner ('Receiving Party'), or vice versa, whether orally or in writing, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure.",
-        "Transnode's Confidential Information specifically includes, but is not limited to: proprietary AI algorithms, model weights, training datasets, source code, product roadmaps, business plans, financial projections, customer lists, and research data generated via Research Pipe.",
+        "Transnode's Confidential Information specifically includes, but is not limited to: proprietary AI algorithms, model weights, training datasets, source code, product roadmaps, business plans, financial projections, customer lists, and industry-specific insights generated via our products.",
         "2. OBLIGATIONS OF THE RECEIVING PARTY",
         "The Receiving Party agrees to: (i) hold all Confidential Information in strict confidence and not disclose it to any third party except as specifically authorized herein; (ii) use the Confidential Information solely for the purpose of using the Service or evaluating a potential business relationship with Transnode; and (iii) use at least the same degree of care to protect the Confidential Information as it uses to protect its own most confidential information, but in no event less than a reasonable degree of care.",
-        "3. PROTECTION OF USER RESEARCH DATA",
-        "Transnode AI, LLC acknowledges that researchers and students using our platform (specifically Research Pipe) may upload unpublished data, hypotheses, and manuscripts. Transnode agrees to treat all such user-generated research content as Confidential Information. We will not sell, license, or share this data with third parties for marketing purposes. We will not use this data to train public-facing foundational models without explicit, written consent from the user.",
+        "3. PROTECTION OF USER DATA",
+        "Transnode AI, LLC acknowledges that students and professionals using our platform may upload data, credentials, and portfolios. Transnode agrees to treat all such user-generated content as Confidential Information. We will not sell, license, or share this data with third parties for marketing purposes. We not use this data to train public-facing foundational models without explicit, written consent from the user.",
         "4. EXCEPTIONS",
         "Confidential Information shall not include any information that: (i) is or becomes generally known to the public without breach of any obligation owed to the Disclosing Party; (ii) was known to the Receiving Party prior to its disclosure by the Disclosing Party; (iii) is received from a third party without breach of any obligation owed to the Disclosing Party; or (iv) was independently developed by the Receiving Party without use of or reference to the Disclosing Party's Confidential Information.",
         "5. COMPELLED DISCLOSURE",
@@ -484,7 +487,7 @@ const en: ContentType = {
     }
   },
   footer: {
-    tagline: "Building the future of research and career credibility through intelligent systems.",
+    tagline: "Building the future of learning and career credibility through intelligent systems.",
     company: "Company",
     legal: "Legal",
     rights: "Transnode AI, LLC. All rights reserved."
@@ -503,7 +506,7 @@ const zh: ContentType = {
     headlineStart: "构建",
     headlineHighlight: "智能工具",
     headlineEnd: "赋能现代协作",
-    subheadline: "Transnode AI, LLC 开发跨境 AI 产品，提升可信度、加速科研并在全球范围内简化工作流程——深受学生、研究人员和全球中小企业的信赖。",
+    subheadline: "Transnode AI, LLC 开发跨境 AI 产品，提升可信度、加速研究并在全球范围内简化工作流程——深受学生、研究人员和全球中小企业的信赖。",
     ctaPrimary: "加入早期体验",
     ctaSecondary: "投资者咨询",
     ctaCrowdfund: "1美元众筹致谢"
@@ -527,10 +530,10 @@ const zh: ContentType = {
         solution: "自适应 AI 导师分析表现模式，提供个性化课程调整。"
       },
       {
-        title: "AI 匹配",
-        description: "利用图神经网络优化研究人员、志愿者和组织之间的配对，实现高影响力协作。",
-        challenge: "将合适的人才与合适的机会联系起来通常是手动密集型的，且效率低下。",
-        solution: "深度学习匹配算法分析超越关键词的兼容性。"
+        title: "AI 集成",
+        description: "我们利用尖端的 AI 集成和多模态模型，确保为复杂的技术工作流程提供快速交付和高性能解决方案。",
+        challenge: "零散的系统和过时的架构减慢了开发周期并阻碍了实时情报。",
+        solution: "集成最先进的 LLM 和视觉模型，以加速上市时间和运营速度。"
       },
       {
         title: "AI 工作流优化",
@@ -558,7 +561,7 @@ const zh: ContentType = {
     items: [
       { title: "学生", text: "寻求研究经验的本科生" },
       { title: "求职者", text: "提高简历可信度的早期职业人士" },
-      { title: "研究人员", text: "寻找研究合作者的教授和实验室" },
+      { title: "HR 专业人士", text: "通过 AI 验证的候选人证书简化招聘流程" },
       { title: "中小企业", text: "拓展美国市场的跨境企业" }
     ]
   },
@@ -573,17 +576,18 @@ const zh: ContentType = {
         points: ["AI 可信度评分", "基于技能的验证任务", "个性化职业洞察"]
       },
       {
-        name: "Research Pipe",
-        tagline: "协作平台",
-        points: ["跨大学匹配", "AI 工作流与研究任务规划器", "保密性 + 协作管道"]
-      },
-      {
         name: "中美电商 AI 工具",
         tagline: "市场赋能",
         points: ["内容生成", "低成本开店", "市场分析"]
+      },
+      {
+        name: "网站开发服务与数字解决方案",
+        tagline: "业务增长",
+        points: ["Shopify", "B2B 落地页", "当地业务", "网站营销服务"]
       }
     ],
     waitlistBtn: "加入候补名单",
+    quoteBtn: "索取报价",
     earlyAccessBtn: "当前 MVP 演示",
     roadmapTitle: "产品路线图",
     roadmapDesc: "我们的智能工具旨在通过验证、协作和市场准入赋能下一代专业人士。"
@@ -591,7 +595,7 @@ const zh: ContentType = {
   team: {
     hero: {
       title: "我们的团队",
-      subheading: "我们的创始团队带来全球视野和来自加州大学圣地亚哥分校和复旦大学等中美顶尖机构的学术背景。我们结合 AI 系统、后端工程和研究运营方面的专业知识，为现代工作和验证构建可靠的智能工具。"
+      subheading: "我们的创始团队带来全球视野和来自加州大学圣地亚哥分校和复旦大学等中美顶尖机构的学术背景。我们结合 AI 系统、后端工程和研究运营方面的专业知识，为现代 work 和验证构建可靠的智能工具。"
     },
     philosophy: {
       title: "我们的工作方式",
@@ -622,7 +626,7 @@ const zh: ContentType = {
         "在 AI 工程、后端系统、产品开发和研究工作流方面拥有经验",
         "曾从事机器学习、分布式系统、用户研究和跨境科技产品工作"
       ],
-      closing: "我们正在扩充核心团队，以开发 USVerif 和 ResearchPipe。"
+      closing: "我们正在扩充核心团队，以开发 USVerif 等产品。"
     },
     advisors: {
       title: "顾问与合作者",
@@ -652,7 +656,7 @@ const zh: ContentType = {
   },
   careers: {
     title: "欢迎实习生与贡献者",
-    description: "我们提供 AI、数据、软件工程和产品设计方面的实践经验。非常适合寻求真实项目和作品集发展的学生。支持远程、基于项目、灵活的时间安排。",
+    description: "我们提供 AI、数据、软件工程和 product 设计方面的实践经验。非常适合寻求真实项目和作品集发展的学生。支持远程、基于项目、灵活的时间安排。",
     btnApply: "申请实习",
     btnStudent: "UCSD 学生通道 → 直接联系"
   },
@@ -661,7 +665,7 @@ const zh: ContentType = {
     title: "联系我们",
     description: "无论您是寻找机会的学生、寻求合作的研究人员，还是对我们愿景感兴趣的投资者，我们都希望能听到您的声音。",
     emailTitle: "给我们发邮件",
-    emailDesc: "用于一般咨询、合作和支持。",
+    emailDesc: "用于一般咨询、合作 and 支持。",
     locationTitle: "总部",
     locationDesc: "美国加利福尼亚州圣地亚哥",
     socialTitle: "在社交媒体上联系",
@@ -779,10 +783,10 @@ const es: ContentType = {
         solution: "Tutores de IA adaptativos analizan patrones de rendimiento para proporcionar un plan de estudios personalizado."
       },
       {
-        title: "Emparejamiento IA",
-        description: "Utilizando redes neuronales gráficas para emparejar óptimamente investigadores, voluntarios y organizaciones.",
-        challenge: "Conectar el talento adecuado con la oportunidad adecuada es intensivo y propenso a sesgos.",
-        solution: "Algoritmos de emparejamiento de aprendizaje profundo analizan la compatibilidad más allá de las palabras clave."
+        title: "Integraciones de IA",
+        description: "Aprovechamos las integraciones de IA de vanguardia y los modelos multimodales para garantizar una entrega rápida y soluciones técnicas de alto rendimiento.",
+        challenge: "Los sistemas fragmentados y las arquitecturas obsoletas ralentizan los ciclos de desarrollo y evitan la inteligencia en tiempo real.",
+        solution: "Integración de LLM y modelos de visión de última generación para acelerar el tiempo de comercialización y la velocidad operativa."
       },
       {
         title: "Optimización de Flujos de Trabajo",
@@ -810,7 +814,7 @@ const es: ContentType = {
     items: [
       { title: "Estudiantes", text: "Estudiantes de pregrado que buscan experiencia en investigación" },
       { title: "Buscadores de Empleo", text: "Profesionales que mejoran la credibilidad de su currículum" },
-      { title: "Investigadores", text: "Profesores y laboratorios que buscan colaboradores" },
+      { title: "Profesionales de RR.HH.", text: "Agilizando la contratación con credenciales verificadas por IA" },
       { title: "PYMES", text: "Empresas transfronterizas que se expanden a los EE. UU." }
     ]
   },
@@ -825,17 +829,18 @@ const es: ContentType = {
         points: ["Puntuación de credibilidad IA", "Verificación de habilidades", "Información profesional personalizada"]
       },
       {
-        name: "Research Pipe",
-        tagline: "Plataforma de Colaboración",
-        points: ["Emparejamiento interuniversitario", "Planificador de tareas de investigación", "Confidencialidad"]
-      },
-      {
         name: "Herramientas de IA para E-Commerce",
         tagline: "Habilitación de Mercado",
         points: ["Generación de contenido", "Configuración de tienda de bajo costo", "Analítica de mercado"]
+      },
+      {
+        name: "Servicio de Desarrollo Web y Soluciones Digitales",
+        tagline: "Crecimiento Empresarial",
+        points: ["Shopify", "Página de aterrizaje B2B", "Negocio local", "Servicios de Marketing Web"]
       }
     ],
     waitlistBtn: "Unirse a la Lista de Espera",
+    quoteBtn: "Solicitar Presupuesto",
     earlyAccessBtn: "Presentación MVP Actual",
     roadmapTitle: "Hoja de Ruta del Producto",
     roadmapDesc: "Nuestras herramientas inteligentes están diseñadas para empoderar a la próxima generación de profesionales."
@@ -930,7 +935,7 @@ const es: ContentType = {
     formName: "Tu Nombre",
     formEmail: "Correo Electrónico",
     formSubject: "Asunto",
-    formMessage: "Mensaje",
+    formMessage: "Message",
     formButton: "Enviar Mensaje",
     sentTitle: "¡Mensaje Enviado!",
     sentDesc: "Te responderemos en breve.",
@@ -1031,10 +1036,10 @@ const ko: ContentType = {
         solution: "적응형 AI 튜터가 성과 패턴을 분석하여 맞춤형 커리큘럼을 제공합니다."
       },
       {
-        title: "AI 매칭",
-        description: "그래프 신경망을 활용하여 연구원, 자원 봉사자 및 조직을 최적으로 연결합니다.",
-        challenge: "적절한 인재를 적절한 기회에 연결하는 것은 수작업이 많고 비효율적입니다.",
-        solution: "딥 러닝 매칭 알고리즘은 키워드를 넘어 호환성을 분석합니다."
+        title: "AI 통합",
+        description: "최첨단 AI 통합 및 멀티모달 모델을 활용하여 가장 빠른 제공과 고성능 기술 솔루션을 보장합니다.",
+        challenge: "파편화된 시스템과 오래된 아키텍처는 개발 주기를 늦추고 실시간 지능을 방해합니다.",
+        solution: "최신 LLM 및 비전 모델을 통합하여 시장 출시 기간과 운영 속도를 가속화합니다."
       },
       {
         title: "AI 워크플로우 최적화",
@@ -1062,7 +1067,7 @@ const ko: ContentType = {
     items: [
       { title: "학생", text: "연구 경험을 원하는 학부생" },
       { title: "구직자", text: "이력서 신뢰성을 높이는 초기 경력 전문가" },
-      { title: "연구원", text: "연구 협력자를 찾는 교수 및 연구소" },
+      { title: "HR 전문가", text: "AI로 검증된 자격 증명을 통해 채용 프로세스 간소화" },
       { title: "중소기업", text: "미국으로 확장하는 국경 간 기업" }
     ]
   },
@@ -1077,17 +1082,18 @@ const ko: ContentType = {
         points: ["AI 신뢰성 점수", "기술 기반 검증 과제", "개인화된 진로 통찰력"]
       },
       {
-        name: "Research Pipe",
-        tagline: "협업 플랫폼",
-        points: ["대학 간 매칭", "AI 워크플로우 및 연구 과제 플래너", "기밀 유지"]
-      },
-      {
         name: "미중 전자상거래 AI 도구",
         tagline: "시장 활성화",
         points: ["콘텐츠 생성", "저비용 상점 설정", "시장 분석"]
+      },
+      {
+        name: "웹 개발 서비스 및 디지털 솔루션",
+        tagline: "비즈니스 성장",
+        points: ["Shopify", "B2B 랜딩 페이지", "현지 비즈니스", "웹사이트 마케팅 서비스"]
       }
     ],
     waitlistBtn: "대기자 명단 가입",
+    quoteBtn: "견적 요청",
     earlyAccessBtn: "현재 MVP 프레젠테이션",
     roadmapTitle: "제품 로드맵",
     roadmapDesc: "우리의 지능형 도구는 차세대 전문가에게 권한을 부여하도록 설계되었습니다."
@@ -1158,7 +1164,7 @@ const ko: ContentType = {
     title: "인턴 및 기여자 환영",
     description: "AI, 데이터, 소프트웨어 엔지니어링 실무 경험을 제공합니다.",
     btnApply: "인턴 지원",
-    btnStudent: "UCSD 학생용"
+    btnStudent: "Direct Contact"
   },
   contact: {
     tagline: "연락하기",
