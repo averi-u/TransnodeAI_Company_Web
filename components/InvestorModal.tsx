@@ -1,5 +1,12 @@
+
 import React, { useState, useEffect } from 'react';
-import { X, TrendingUp, Users, Target, Building2, Send, Loader2, Globe2 } from 'lucide-react';
+import { X, TrendingUp, Users, Target, Building2, Send, Loader2 } from 'lucide-react';
+import { createClient } from '@supabase/supabase-js';
+
+// Initialize Supabase Client
+const SUPABASE_URL = 'https://giskiarjtqwxxoshywsy.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdpc2tpYXJqdHF3eHhvc2h5d3N5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkxMzkwNzIsImV4cCI6MjA4NDcxNTA3Mn0.25ZQwzYzqmfSmi7EV09tYc42ZSaZVjcgsfqNMAcYeRE';
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 interface InvestorModalProps {
   isOpen: boolean;
@@ -10,10 +17,10 @@ const InvestorModal: React.FC<InvestorModalProps> = ({ isOpen, onClose }) => {
   const [formState, setFormState] = useState({
     name: '',
     firm: '',
-    email: '',
-    message: ''
+    email: ''
   });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     if (isOpen) {
@@ -26,12 +33,30 @@ const InvestorModal: React.FC<InvestorModalProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('loading');
-    setTimeout(() => {
+    setErrorMessage('');
+
+    try {
+      const { error } = await supabase
+        .from('pitch_deck_requests')
+        .insert([
+          { 
+            name: formState.name, 
+            firm: formState.firm, 
+            email: formState.email 
+          }
+        ]);
+
+      if (error) throw error;
+      
       setStatus('success');
-    }, 1500);
+    } catch (err: any) {
+      console.error('Supabase submission error:', err);
+      setStatus('error');
+      setErrorMessage(err.message || 'An error occurred while sending your inquiry. Please try again.');
+    }
   };
 
   if (!isOpen) return null;
@@ -54,7 +79,6 @@ const InvestorModal: React.FC<InvestorModalProps> = ({ isOpen, onClose }) => {
 
         {/* Left Side: Impact & Metrics (Dark) */}
         <div className="md:w-2/5 bg-[#0A2540] text-white p-8 md:p-10 relative overflow-hidden flex flex-col justify-between">
-          {/* Decorative background elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl -translate-x-1/3 translate-y-1/2"></div>
 
@@ -93,7 +117,7 @@ const InvestorModal: React.FC<InvestorModalProps> = ({ isOpen, onClose }) => {
                    <span className="text-slate-300 text-sm font-medium">Vision</span>
                 </div>
                 <p className="text-sm text-slate-200 italic">
-                  "To become the global standard for AI-verified academic and professional credentials."
+                  "To become the global standard for AI-verified academic and professional identity."
                 </p>
               </div>
             </div>
@@ -169,21 +193,16 @@ const InvestorModal: React.FC<InvestorModalProps> = ({ isOpen, onClose }) => {
                     />
                   </div>
 
-                  <div className="space-y-1.5">
-                    <label className="text-sm font-semibold text-slate-700">Message (Optional)</label>
-                    <textarea 
-                      rows={4}
-                      className="w-full px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white focus:border-[#0A2540] focus:ring-1 focus:ring-[#0A2540] transition-all outline-none resize-none"
-                      placeholder="Tell us about your investment thesis..."
-                      value={formState.message}
-                      onChange={e => setFormState({...formState, message: e.target.value})}
-                    />
-                  </div>
+                  {status === 'error' && (
+                    <p className="text-sm text-red-500 font-medium bg-red-50 p-3 rounded-lg border border-red-100">
+                      {errorMessage}
+                    </p>
+                  )}
 
                   <button 
                     type="submit" 
                     disabled={status === 'loading'}
-                    className="w-full py-4 bg-[#0A2540] hover:bg-[#163a5f] text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all disabled:opacity-70"
+                    className="w-full py-4 bg-[#0A2540] hover:bg-[#163a5f] text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all disabled:opacity-70 mt-4"
                   >
                     {status === 'loading' ? (
                       <>

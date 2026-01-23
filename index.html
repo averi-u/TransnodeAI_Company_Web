@@ -15,14 +15,29 @@
     <title>Transnode AI - Intelligent Tools for Learning & Collaboration</title>
     <meta name="description" content="Transnode AI, LLC develops cross-border AI products for research verification, adaptive education, and global workflow optimization." />
     
-    <!-- Structured Data for Search Engines (JSON-LD) -->
+    <!-- 
+      Google Search Favicon & Logo Optimization 
+      Requirements: 
+      1. Stable URL
+      2. Multiple of 48px square (48x48, 96x96, 144x144, etc.)
+    -->
+    <link rel="icon" href="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/.png" sizes="48x48" type="image/png" />
+    <link rel="icon" href="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo_search_engine.png" sizes="96x96" type="image/png" />
+    <link rel="icon" href="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo_search_engine.png" sizes="144x144" type="image/png" />
+    <link rel="icon" href="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo_search_engine.png" sizes="432x432" type="image/png" />
+
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo_search_engine.png" />
+    
+    <!-- Structured Data for Knowledge Graph (JSON-LD) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Transnode AI, LLC",
         "url": "https://transnode.ai",
-        "logo": "https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo(2).png",
+        "logo": "https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo_search_engine.png",
+        "image": "https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo_search_engine.png",
+        "description": "Transnode AI, LLC develops cross-border AI products for research verification, adaptive education, and global workflow optimization.",
         "sameAs": [
           "https://www.linkedin.com/company/transnode-llc",
           "https://x.com/transnodeai",
@@ -36,17 +51,13 @@
     <meta property="og:url" content="https://transnode.ai/" />
     <meta property="og:title" content="Transnode AI - Intelligent Tools for Learning & Collaboration" />
     <meta property="og:description" content="Transnode AI develops cross-border AI products for research verification and adaptive education." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo(2).png" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo_search_engine.png" />
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Transnode AI - Intelligent Tools" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo(2).png" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo_search_engine.png" />
 
-    <!-- Favicons and Icons -->
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo(2).png" />
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/averi-u/TransnodeAI_Company_Web/main/components/Transnode_logo(2).png" />
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,6 +103,7 @@
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
     "three": "https://aistudiocdn.com/three@^0.181.2",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.45.1",
     "assets/": "https://esm.sh/assets@^3.0.1/"
   }
 }
