@@ -8,7 +8,7 @@ const ContactPage: React.FC = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
-    subject: 'General Inquiry',
+    subject: 'User Waitlist',
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
@@ -22,7 +22,7 @@ const ContactPage: React.FC = () => {
       setStatus('success');
       // Reset form after a delay
       setTimeout(() => {
-        setFormState({ name: '', email: '', subject: 'General Inquiry', message: '' });
+        setFormState({ name: '', email: '', subject: 'User Waitlist', message: '' });
         setStatus('idle');
       }, 3000);
     }, 1500);
@@ -67,7 +67,7 @@ const ContactPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* Social Media (Moved to Left Column) */}
+            {/* Social Media */}
             <div className="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200">
                 <h3 className="text-2xl font-bold text-[#0A2540] mb-6">{content.contact.socialTitle}</h3>
                 <p className="text-slate-600 mb-8">
@@ -129,10 +129,8 @@ const ContactPage: React.FC = () => {
                         <span className="font-semibold text-slate-700 group-hover:text-red-600">{content.contact.socialPlatforms.youtube}</span>
                     </a>
 
-                    {/* Other Platforms (Combined Card with Clickable Icons) */}
                     <div className="flex items-center gap-3 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
                         <div className="flex -space-x-2 pl-1">
-                            {/* Douyin */}
                             <a 
                                href="https://www.douyin.com"
                                target="_blank"
@@ -144,7 +142,6 @@ const ContactPage: React.FC = () => {
                                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                                 </svg>
                             </a>
-                            {/* Rednote */}
                             <a 
                                href="https://xhslink.com/m/8XBs8mCZ20E"
                                target="_blank"
@@ -154,7 +151,6 @@ const ContactPage: React.FC = () => {
                             >
                                 <span className="text-white text-xs font-bold">小</span>
                             </a>
-                            {/* Bilibili */}
                             <a 
                                href="https://b23.tv/XwOAmRM"
                                target="_blank"
@@ -177,7 +173,7 @@ const ContactPage: React.FC = () => {
 
         {/* Right Column: Inquiry Form & Investors */}
         <div className="space-y-6">
-            {/* Inquiry Form (New) */}
+            {/* Inquiry Form */}
             <div className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
                 
@@ -234,6 +230,7 @@ const ContactPage: React.FC = () => {
                                     value={formState.subject}
                                     onChange={e => setFormState({...formState, subject: e.target.value})}
                                  >
+                                    <option>User Waitlist</option>
                                     <option>General Inquiry</option>
                                     <option>Partnership Proposal</option>
                                     <option>Career Opportunity</option>
@@ -250,9 +247,11 @@ const ContactPage: React.FC = () => {
                         </div>
 
                         <div>
-                            <label className="block text-sm font-semibold text-slate-700 mb-1.5">{content.contact.formMessage}</label>
+                            <label className="block text-sm font-semibold text-slate-700 mb-1.5">
+                                {content.contact.formMessage}
+                                <span className="text-slate-400 font-normal ml-1">(Optional)</span>
+                            </label>
                             <textarea 
-                                required
                                 rows={4}
                                 placeholder="How can we help you?"
                                 className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-[#0A2540] focus:ring-1 focus:ring-[#0A2540] transition-all outline-none resize-none"

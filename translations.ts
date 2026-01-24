@@ -58,6 +58,13 @@ export interface ContentType {
     earlyAccessBtn: string;
     roadmapTitle: string;
     roadmapDesc: string;
+    pastProjectsTitle: string;
+    pastProjects: {
+      name: string;
+      desc: string;
+      link: string;
+      url: string;
+    }[];
   };
   team: {
     hero: {
@@ -259,7 +266,22 @@ const en: ContentType = {
     quoteBtn: "Request a Quote",
     earlyAccessBtn: "Current MVP Presentation",
     roadmapTitle: "Product Roadmap",
-    roadmapDesc: "Our intelligent tools are designed to empower the next generation of professionals with verification, collaboration, and market access."
+    roadmapDesc: "Our intelligent tools are designed to empower the next generation of professionals with verification, collaboration, and market access.",
+    pastProjectsTitle: "Client Success Portfolio",
+    pastProjects: [
+      {
+        name: "Kergle Electronics Ecommerce Store",
+        desc: "",
+        link: "https://www.kergle.us",
+        url: "www.kergle.us"
+      },
+      {
+        name: "OnPrime Global Enterprise Company Site",
+        desc: "",
+        link: "https://www.onprimeglobal.com",
+        url: "www.onprimeglobal.com"
+      }
+    ]
   },
   team: {
     hero: {
@@ -442,7 +464,6 @@ const en: ContentType = {
         "If you have any questions about this Privacy Policy, please contact us by email: legal@transnode.ai."
       ]
     },
-    // Fix: Adding the missing 'terms' property to en.legalPage to match ContentType interface
     terms: {
       title: "Terms of Service",
       content: [
@@ -590,7 +611,22 @@ const zh: ContentType = {
     quoteBtn: "索取报价",
     earlyAccessBtn: "当前 MVP 演示",
     roadmapTitle: "产品路线图",
-    roadmapDesc: "我们的智能工具旨在通过验证、协作和市场准入赋能下一代专业人士。"
+    roadmapDesc: "我们的智能工具旨在通过验证、协作和市场准入赋能下一代专业人士。",
+    pastProjectsTitle: "Client Success Portfolio",
+    pastProjects: [
+      {
+        name: "Kergle Electronics Ecommerce Store",
+        desc: "",
+        link: "https://www.kergle.us",
+        url: "www.kergle.us"
+      },
+      {
+        name: "OnPrime Global Enterprise Company Site",
+        desc: "",
+        link: "https://www.onprimeglobal.com",
+        url: "www.onprimeglobal.com"
+      }
+    ]
   },
   team: {
     hero: {
@@ -630,7 +666,7 @@ const zh: ContentType = {
     },
     advisors: {
       title: "顾问与合作者",
-      description: "我们积极与以下领域的研究人员、工程师和行业专业人士合作：",
+      description: "我们积极与以下领域的研究人员、工程师 and 行业专业人士合作：",
       areas: [
         "人工智能",
         "验证与合规",
@@ -843,7 +879,22 @@ const es: ContentType = {
     quoteBtn: "Solicitar Presupuesto",
     earlyAccessBtn: "Presentación MVP Actual",
     roadmapTitle: "Hoja de Ruta del Producto",
-    roadmapDesc: "Nuestras herramientas inteligentes están diseñadas para empoderar a la próxima generación de profesionales."
+    roadmapDesc: "Nuestras herramientas inteligentes están diseñadas para empoderar a la próxima generación de profesionales.",
+    pastProjectsTitle: "Client Success Portfolio",
+    pastProjects: [
+      {
+        name: "Kergle Electronics Ecommerce Store",
+        desc: "",
+        link: "https://www.kergle.us",
+        url: "www.kergle.us"
+      },
+      {
+        name: "OnPrime Global Enterprise Company Site",
+        desc: "",
+        link: "https://www.onprimeglobal.com",
+        url: "www.onprimeglobal.com"
+      }
+    ]
   },
   team: {
     hero: {
@@ -931,7 +982,7 @@ const es: ContentType = {
       youtube: "YouTube",
       other: "Otros"
     },
-    formTitle: "Enviar Mensaje",
+    formTitle: "Send a Message",
     formName: "Tu Nombre",
     formEmail: "Correo Electrónico",
     formSubject: "Asunto",
@@ -1096,7 +1147,22 @@ const ko: ContentType = {
     quoteBtn: "견적 요청",
     earlyAccessBtn: "현재 MVP 프레젠테이션",
     roadmapTitle: "제품 로드맵",
-    roadmapDesc: "우리의 지능형 도구는 차세대 전문가에게 권한을 부여하도록 설계되었습니다."
+    roadmapDesc: "우리의 지능형 도구는 차세대 전문가에게 권한을 부여하도록 설계되었습니다.",
+    pastProjectsTitle: "Client Success Portfolio",
+    pastProjects: [
+      {
+        name: "Kergle Electronics Ecommerce Store",
+        desc: "",
+        link: "https://www.kergle.us",
+        url: "www.kergle.us"
+      },
+      {
+        name: "OnPrime Global Enterprise Company Site",
+        desc: "",
+        link: "https://www.onprimeglobal.com",
+        url: "www.onprimeglobal.com"
+      }
+    ]
   },
   team: {
     hero: {
@@ -1184,10 +1250,10 @@ const ko: ContentType = {
       youtube: "YouTube",
       other: "기타"
     },
-    formTitle: "메시지 보내기",
+    formTitle: "Send a Message",
     formName: "이름",
     formEmail: "이메일 주소",
-    formSubject: "제목",
+    formSubject: "주제",
     formMessage: "메시지",
     formButton: "메시지 보내기",
     sentTitle: "메시지 전송됨!",
