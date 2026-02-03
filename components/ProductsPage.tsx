@@ -88,7 +88,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onJoinWaitlistClick, onQuot
                  <div className="md:col-span-8 flex flex-col gap-6">
                     {/* Conditional Rendering for Service Box: Client Success Portfolio */}
                     {isService ? (
-                      <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+                      <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 h-full">
                         <a 
                           href="https://docs.google.com/spreadsheets/d/1Xv5K8_4Lh7H5rK9vWqX-F8y2E0H6_j-F0F_X_l_k_l_w/edit?usp=sharing"
                           target="_blank"
@@ -99,18 +99,18 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onJoinWaitlistClick, onQuot
                            {content.products.pastProjectsTitle}
                            <ExternalLink size={14} className="opacity-50 group-hover:opacity-100 transition-opacity" />
                         </a>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-3">
                            {content.products.pastProjects.map((project, pIdx) => (
                              <div 
                                key={pIdx} 
-                               className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-sm text-slate-700"
+                               className="text-sm text-slate-700"
                              >
                                <span className="font-bold text-[#0A2540]">{project.name}:</span>
                                <a 
                                  href={project.link} 
                                  target="_blank" 
                                  rel="noreferrer"
-                                 className="text-teal-600 hover:text-teal-500 hover:underline flex items-center gap-1 transition-all"
+                                 className="ml-2 text-teal-600 hover:text-teal-500 hover:underline inline-flex items-center gap-1 transition-all"
                                >
                                   {project.url}
                                   <ExternalLink size={12} className="opacity-70" />

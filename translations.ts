@@ -273,13 +273,13 @@ const en: ContentType = {
         name: "Kergle Electronics Ecommerce Store",
         desc: "",
         link: "https://www.kergle.us",
-        url: "www.kergle.us"
+        url: "https://www.kergle.us"
       },
       {
         name: "OnPrime Global Enterprise Company Site",
         desc: "",
         link: "https://www.onprimeglobal.com",
-        url: "www.onprimeglobal.com"
+        url: "https://www.onprimeglobal.com"
       }
     ]
   },
@@ -618,13 +618,13 @@ const zh: ContentType = {
         name: "Kergle Electronics Ecommerce Store",
         desc: "",
         link: "https://www.kergle.us",
-        url: "www.kergle.us"
+        url: "https://www.kergle.us"
       },
       {
         name: "OnPrime Global Enterprise Company Site",
         desc: "",
         link: "https://www.onprimeglobal.com",
-        url: "www.onprimeglobal.com"
+        url: "https://www.onprimeglobal.com"
       }
     ]
   },
@@ -714,7 +714,7 @@ const zh: ContentType = {
       youtube: "YouTube",
       other: "其他"
     },
-    formTitle: "发送消息",
+    formTitle: "Send a Message",
     formName: "您的姓名",
     formEmail: "电子邮件地址",
     formSubject: "主题",
@@ -886,13 +886,13 @@ const es: ContentType = {
         name: "Kergle Electronics Ecommerce Store",
         desc: "",
         link: "https://www.kergle.us",
-        url: "www.kergle.us"
+        url: "https://www.kergle.us"
       },
       {
         name: "OnPrime Global Enterprise Company Site",
         desc: "",
         link: "https://www.onprimeglobal.com",
-        url: "www.onprimeglobal.com"
+        url: "https://www.onprimeglobal.com"
       }
     ]
   },
@@ -1032,11 +1032,11 @@ const es: ContentType = {
     },
     privacy: {
       title: "Política de Privacidad",
-      content: ["Consulte la versión en inglés para conocer los términos legales completos.", "Transnode AI, LLC respeta su privacidad..."]
+      content: ["Consulte la versión en inglés para conocer los términos legales completos.", "Transnode IA, LLC respeta su privacidad..."]
     },
     terms: {
       title: "Términos de Servicio",
-      content: ["Consulte la versión en inglés para conocer los términos legales completos.", "Gracias por su interés en Transnode AI, LLC..."]
+      content: ["Consulte la versión en inglés para conocer los términos legales completos.", "Gracias por su interés en Transnode IA, LLC..."]
     },
     confidentiality: {
       title: "Acuerdo de Confidencialidad",
@@ -1154,13 +1154,13 @@ const ko: ContentType = {
         name: "Kergle Electronics Ecommerce Store",
         desc: "",
         link: "https://www.kergle.us",
-        url: "www.kergle.us"
+        url: "https://www.kergle.us"
       },
       {
         name: "OnPrime Global Enterprise Company Site",
         desc: "",
         link: "https://www.onprimeglobal.com",
-        url: "www.onprimeglobal.com"
+        url: "https://www.onprimeglobal.com"
       }
     ]
   },

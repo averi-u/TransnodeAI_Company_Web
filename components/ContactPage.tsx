@@ -230,13 +230,13 @@ const ContactPage: React.FC = () => {
                                     value={formState.subject}
                                     onChange={e => setFormState({...formState, subject: e.target.value})}
                                  >
-                                    <option>User Waitlist</option>
-                                    <option>General Inquiry</option>
-                                    <option>Partnership Proposal</option>
-                                    <option>Career Opportunity</option>
-                                    <option>Request a Quote for Web Dev</option>
-                                    <option>Request Pitch Deck or Product Demo</option>
-                                    <option>Other</option>
+                                    <option value="User Waitlist">User Waitlist</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Partnership Proposal">Partnership Proposal</option>
+                                    <option value="Career Opportunity">Career Opportunity</option>
+                                    <option value="Request a Quote for Web Dev">Request a Quote for Web Dev</option>
+                                    <option value="Request Pitch Deck or Product Demo">Request Pitch Deck or Product Demo</option>
+                                    <option value="Other">Other</option>
                                  </select>
                                  <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
                                     <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
