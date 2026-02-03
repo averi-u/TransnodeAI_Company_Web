@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
         <a href="#" onClick={handleLogoClick} className="flex items-center space-x-3 group">
           <div className="w-10 h-10 shrink-0 rounded-lg overflow-hidden border border-white/5 shadow-sm bg-white flex items-center justify-center text-[#0A2540]">
             <img
-            src="https://drive.google.com/uc?id=121KknpjfMdODsBwRE6uT7HwKFLVe326C"
+            src="https://drive.google.com/uc?export=view&id=121KknpjfMdODsBwRE6uT7HwKFLVe326C"
             alt="Transnode Logo"
             className="w-full h-full object-contain p-0.5"
             />
