@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { X, ExternalLink, Heart, DollarSign, Copy, Check, CreditCard, Loader2 } from 'lucide-react';
+import { X, ExternalLink, Heart, DollarSign, Copy, Check, CreditCard, Loader2, Rocket } from 'lucide-react';
 
 interface CrowdfundModalProps {
   isOpen: boolean;
@@ -15,8 +16,8 @@ const CrowdfundModal: React.FC<CrowdfundModalProps> = ({ isOpen, onClose }) => {
   const [stripeLoading, setStripeLoading] = useState(false);
 
   // Configuration
-  const STRIPE_PUBLISHABLE_KEY = "pk_live_51SKqtKDBDoK7rX7C26F52KZ5g1r9nVaxaYL0tpdfgg8z5VPb5YB9eObgdrQQjoPcaToV8Y855kG1KVxOecPv37g8001XZRoVRC";
   const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/fZudR97yibKgeCQ4U01RC00";
+  const KICKSTARTER_LINK = "https://www.kickstarter.com/profile/averieyu/about";
 
   useEffect(() => {
     if (isOpen) {
@@ -79,16 +80,21 @@ const CrowdfundModal: React.FC<CrowdfundModalProps> = ({ isOpen, onClose }) => {
           <div className="space-y-4">
             {/* Kickstarter Option */}
             <a 
-              href="https://www.kickstarter.com" 
-              target="_blank" 
+              href={KICKSTARTER_LINK}
+              target="_blank"
               rel="noreferrer"
-              className="flex items-center justify-between w-full p-4 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50 group transition-all"
+              className="flex items-center justify-between w-full p-4 rounded-xl border border-slate-200 hover:border-green-500 hover:bg-green-50 transition-all text-left group"
             >
-              <div className="text-left">
-                <div className="font-bold text-[#0A2540]">Kickstarter Campaign</div>
-                <div className="text-xs text-slate-500">Back our official launch</div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-green-100 text-green-600 rounded-lg flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition-colors">
+                  <Rocket size={20} />
+                </div>
+                <div>
+                  <div className="font-bold text-[#0A2540]">Kickstarter Campaign</div>
+                  <div className="text-xs text-green-600 font-medium">Follow our funding journey</div>
+                </div>
               </div>
-              <ExternalLink size={20} className="text-slate-400 group-hover:text-teal-500" />
+              <ExternalLink size={18} className="text-slate-400 group-hover:text-green-500 transition-colors" />
             </a>
 
             {/* Stripe Option */}
@@ -100,11 +106,15 @@ const CrowdfundModal: React.FC<CrowdfundModalProps> = ({ isOpen, onClose }) => {
                   }}
                   className={`flex items-center justify-between w-full p-4 rounded-xl border transition-all text-left ${showStripe ? 'border-blue-500 bg-blue-50' : 'border-slate-200 hover:border-blue-500 hover:bg-blue-50'}`}
                 >
-                  <div>
-                    <div className="font-bold text-[#0A2540]">Direct Card Donation</div>
-                    <div className="text-xs text-blue-600 font-medium">Secure payment via Stripe</div>
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${showStripe ? 'bg-blue-600 text-white' : 'bg-blue-100 text-blue-600'}`}>
+                      <CreditCard size={20} />
+                    </div>
+                    <div>
+                      <div className="font-bold text-[#0A2540]">Direct Card Donation</div>
+                      <div className="text-xs text-blue-600 font-medium">Secure payment via Stripe</div>
+                    </div>
                   </div>
-                  <CreditCard size={20} className={`transition-colors ${showStripe ? 'text-blue-500' : 'text-slate-400'}`} />
                 </button>
                 
                 {showStripe && (
@@ -148,11 +158,15 @@ const CrowdfundModal: React.FC<CrowdfundModalProps> = ({ isOpen, onClose }) => {
                   }}
                   className={`flex items-center justify-between w-full p-4 rounded-xl border transition-all text-left ${showPaymentDetails ? 'border-pink-500 bg-pink-50' : 'border-slate-200 hover:border-pink-500 hover:bg-pink-50'}`}
                 >
-                  <div>
-                    <div className="font-bold text-[#0A2540]">Venmo Donation</div>
-                    <div className="text-xs text-pink-600 font-medium">Become the 1 dollar Angel Investor</div>
+                  <div className="flex items-center gap-3">
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-colors ${showPaymentDetails ? 'bg-pink-600 text-white' : 'bg-pink-100 text-pink-600'}`}>
+                      <DollarSign size={20} />
+                    </div>
+                    <div>
+                      <div className="font-bold text-[#0A2540]">Venmo Donation</div>
+                      <div className="text-xs text-pink-600 font-medium">Become the 1 dollar Angel Investor</div>
+                    </div>
                   </div>
-                  <DollarSign size={20} className={`transition-colors ${showPaymentDetails ? 'text-pink-500' : 'text-slate-400'}`} />
                 </button>
                 
                 {showPaymentDetails && (

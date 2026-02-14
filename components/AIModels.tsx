@@ -57,7 +57,20 @@ const AIModels: React.FC = () => {
                  </div>
                </a>
 
-               {/* BBB Badge - Moved to the right-most position */}
+               {/* Atlassian for Startups */}
+               <a href="https://www.atlassian.com/software/startups" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 transition-transform hover:scale-105 group">
+                 <img 
+                   src="https://image2url.com/r2/default/images/1771031197522-033eedc0-aebc-435a-99f5-cd6e7178e982.png" 
+                   alt="Atlassian" 
+                   className="h-6 md:h-8 w-auto" 
+                 />
+                 <div className="flex flex-col text-[11px] font-bold text-slate-700 leading-tight uppercase tracking-wide text-left group-hover:text-[#0052CC] transition-colors">
+                   <span>Atlassian for</span>
+                   <span>Startups</span>
+                 </div>
+               </a>
+
+               {/* BBB Badge */}
                <a href="https://www.bbb.org/us/ca/san-diego/profile/computer-software/transnode-ai-1126-1000160321/#sealclick" id="bbblink" className="ruhzbum transition-transform hover:scale-105" target="_blank" rel="nofollow">
                  <img 
                    src="https://seal-central-northern-western-arizona.bbb.org/seals/blue-seal-69-145-bbb-1000160321.png" 
