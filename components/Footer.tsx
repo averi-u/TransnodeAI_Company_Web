@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from './LanguageContext';
 import { Language } from '../translations';
-import { Globe } from 'lucide-react';
+import { Globe, ShieldCheck } from 'lucide-react';
 import { ViewState } from './Navbar';
 
 interface FooterProps {
@@ -26,6 +26,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     }
   };
 
+  const E_VERIFY_URL = "https://image2url.com/r2/default/images/1771036150475-b62cdba1-ca69-49e3-b263-e69892119176.png";
+  const E_VERIFY_LINK = "https://drive.google.com/file/d/13tnxeSEUnQnsfMTCM2Jkc5cpaUXXnC0i/view?usp=sharing";
+
   return (
     <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
@@ -39,10 +42,23 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
              <a href="mailto:contact@transnode.ai" className="text-teal-400 hover:underline">contact@transnode.ai</a>
           </div>
           
-          {/* BBB Seal for Desktop/Tablet */}
-          <div className="mt-6 hidden md:block">
-            <a href="https://www.bbb.org/us/ca/san-diego/profile/computer-software/transnode-ai-1126-1000160321/#sealclick" target="_blank" rel="nofollow">
-              <img src="https://seal-central-northern-western-arizona.bbb.org/seals/blue-seal-293-61-whitetxt-bbb-1000160321.png" style={{ border: 0 }} alt="Transnode AI BBB Business Review" className="opacity-80 hover:opacity-100 transition-opacity max-h-[52px] w-auto" />
+          {/* Trust Seals for Desktop/Tablet */}
+          <div className="mt-8 hidden md:flex items-center gap-6">
+            <a href="https://www.bbb.org/us/ca/san-diego/profile/computer-software/transnode-ai-1126-1000160321/#sealclick" target="_blank" rel="nofollow" className="transition-transform hover:scale-105">
+              <img 
+                src="https://seal-central-northern-western-arizona.bbb.org/seals/blue-seal-293-61-whitetxt-bbb-1000160321.png" 
+                style={{ border: 0 }} 
+                alt="Transnode AI BBB Business Review" 
+                className="opacity-80 hover:opacity-100 transition-opacity max-h-[52px] w-auto" 
+              />
+            </a>
+            <a href={E_VERIFY_LINK} target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105 flex flex-col items-center">
+              <img 
+                src={E_VERIFY_URL} 
+                alt="E-Verify Participant" 
+                className="opacity-80 hover:opacity-100 transition-opacity max-h-[52px] w-auto" 
+              />
+              <span className="text-[10px] uppercase font-bold tracking-wider mt-1 text-slate-500">E-Verify Participant</span>
             </a>
           </div>
         </div>
@@ -90,16 +106,29 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* Language Switcher & Copyright & Mobile BBB */}
+      {/* Language Switcher & Copyright & Mobile Trust Seals */}
       <div className="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start gap-4">
           <div className="text-sm text-center md:text-left">
             © {new Date().getFullYear()} {content.footer.rights}
           </div>
-          {/* BBB Seal for Mobile */}
-          <div className="md:hidden">
+          {/* Trust Seals for Mobile */}
+          <div className="md:hidden flex flex-wrap justify-center items-center gap-6 mt-2">
             <a href="https://www.bbb.org/us/ca/san-diego/profile/computer-software/transnode-ai-1126-1000160321/#sealclick" target="_blank" rel="nofollow">
-              <img src="https://seal-central-northern-western-arizona.bbb.org/seals/blue-seal-293-61-whitetxt-bbb-1000160321.png" style={{ border: 0 }} alt="Transnode AI BBB Business Review" className="opacity-80 max-h-[48px] w-auto" />
+              <img 
+                src="https://seal-central-northern-western-arizona.bbb.org/seals/blue-seal-293-61-whitetxt-bbb-1000160321.png" 
+                style={{ border: 0 }} 
+                alt="Transnode AI BBB Business Review" 
+                className="opacity-80 max-h-[38px] w-auto" 
+              />
+            </a>
+            <a href={E_VERIFY_LINK} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+              <img 
+                src={E_VERIFY_URL} 
+                alt="E-Verify Participant" 
+                className="opacity-80 max-h-[38px] w-auto" 
+              />
+              <span className="text-[8px] uppercase font-bold tracking-wider mt-1 text-slate-500">E-Verify Participant</span>
             </a>
           </div>
         </div>
