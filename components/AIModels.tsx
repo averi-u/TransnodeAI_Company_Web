@@ -70,6 +70,19 @@ const AIModels: React.FC = () => {
                  </div>
                </a>
 
+               {/* Apple Small Business Program */}
+               <a href="https://developer.apple.com/programs/small-business/" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-3 transition-transform hover:scale-105 group">
+                 <img 
+                   src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" 
+                   alt="Apple" 
+                   className="h-7 md:h-8 w-auto" 
+                 />
+                 <div className="flex flex-col text-[11px] font-bold text-slate-700 leading-tight uppercase tracking-wide text-left group-hover:text-black transition-colors">
+                   <span>Small Business</span>
+                   <span>Program</span>
+                 </div>
+               </a>
+
                {/* BBB Badge */}
                <a href="https://www.bbb.org/us/ca/san-diego/profile/computer-software/transnode-ai-1126-1000160321/#sealclick" id="bbblink" className="ruhzbum transition-transform hover:scale-105" target="_blank" rel="nofollow">
                  <img 
