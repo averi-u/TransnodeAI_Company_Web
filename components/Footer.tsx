@@ -2,7 +2,7 @@
 import React from 'react';
 import { useLanguage } from './LanguageContext';
 import { Language } from '../translations';
-import { Globe, ShieldCheck } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { ViewState } from './Navbar';
 
 interface FooterProps {
@@ -13,6 +13,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   const { content, language, setLanguage } = useLanguage();
 
   const handleLegalClick = (e: React.MouseEvent, section: string) => {
+    // If we want to allow the browser to navigate to the absolute URL on a real production site,
+    // we would remove e.preventDefault(). But for the internal app experience, we keep it.
     e.preventDefault();
     if (onNavigate) {
       onNavigate('legal', section);
@@ -28,6 +30,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
   const E_VERIFY_URL = "https://image2url.com/r2/default/images/1771036150475-b62cdba1-ca69-49e3-b263-e69892119176.png";
   const E_VERIFY_LINK = "https://drive.google.com/file/d/13tnxeSEUnQnsfMTCM2Jkc5cpaUXXnC0i/view?usp=sharing";
+  const POLICY_URL = "https://www.transnode.ai/policy";
 
   return (
     <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
@@ -89,7 +92,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <ul className="space-y-2 text-sm">
             <li>
               <a 
-                href="https://www.transnode.ai/privacypolicy" 
+                href={POLICY_URL} 
                 onClick={(e) => handleLegalClick(e, 'privacy')} 
                 className="hover:text-teal-400 transition-colors"
               >
@@ -97,12 +100,20 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </a>
             </li>
             <li>
-              <a href="#terms" onClick={(e) => handleLegalClick(e, 'terms')} className="hover:text-teal-400 transition-colors">
+              <a 
+                href={POLICY_URL} 
+                onClick={(e) => handleLegalClick(e, 'terms')} 
+                className="hover:text-teal-400 transition-colors"
+              >
                 {content.legalPage.sidebar.terms}
               </a>
             </li>
             <li>
-              <a href="#confidentiality" onClick={(e) => handleLegalClick(e, 'confidentiality')} className="hover:text-teal-400 transition-colors">
+              <a 
+                href={POLICY_URL} 
+                onClick={(e) => handleLegalClick(e, 'confidentiality')} 
+                className="hover:text-teal-400 transition-colors"
+              >
                 {content.legalPage.sidebar.confidentiality}
               </a>
             </li>
