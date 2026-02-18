@@ -88,7 +88,11 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <h4 className="text-white font-semibold mb-4">{content.footer.legal}</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#privacy" onClick={(e) => handleLegalClick(e, 'privacy')} className="hover:text-teal-400 transition-colors">
+              <a 
+                href="https://www.transnode.ai/privacypolicy" 
+                onClick={(e) => handleLegalClick(e, 'privacy')} 
+                className="hover:text-teal-400 transition-colors"
+              >
                 {content.legalPage.sidebar.privacy}
               </a>
             </li>
