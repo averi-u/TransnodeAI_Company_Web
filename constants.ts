@@ -63,7 +63,7 @@ export const TARGET_AUDIENCE = [
 
 export const PRODUCTS: ProductDetail[] = [
   {
-    name: "USVerif",
+    name: "AuthenlyUSA",
     tagline: "Credibility Engine",
     points: [
       "AI credibility scoring",

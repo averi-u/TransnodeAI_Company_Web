@@ -23,16 +23,6 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onJoinWaitlistClick, onQuot
              {content.products.roadmapDesc}
            </p>
         </div>
-        {/* Redirect Button to Google Slides Presentation */}
-        <a 
-          href="https://docs.google.com/presentation/d/1q_dOQSRppZY3fxlJXtKyD5oELZuB93xff40W3weMJQU/edit?usp=sharing"
-          target="_blank"
-          rel="noreferrer"
-          className="px-6 py-3 bg-[#0A2540] hover:bg-teal-600 text-white font-bold rounded-lg transition-all shadow-md flex items-center gap-2"
-        >
-          {content.products.earlyAccessBtn}
-          <ArrowRight size={18} />
-        </a>
       </div>
 
       {/* Product Pipeline Grid */}

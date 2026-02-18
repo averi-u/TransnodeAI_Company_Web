@@ -247,7 +247,7 @@ const en: ContentType = {
     roadmapBtn: "View Roadmap",
     items: [
       {
-        name: "USVerif",
+        name: "AuthenlyUSA",
         tagline: "Credibility Engine",
         points: ["AI credibility scoring", "Skill-based verification tasks", "Personalized career insight"]
       },
@@ -317,7 +317,7 @@ const en: ContentType = {
         "Experience in AI engineering, backend systems, product development, and research workflows",
         "Previously worked on machine learning, distributed systems, user research, and cross-border tech products"
       ],
-      closing: "We are expanding our core team as we develop USVerif and our broader product ecosystem."
+      closing: "We are expanding our core team as we develop AuthenlyUSA and our broader product ecosystem."
     },
     advisors: {
       title: "Advisors & Collaborators",
@@ -422,11 +422,11 @@ const en: ContentType = {
       content: [
         "TRANSNODE AI, LLC PRIVACY POLICY",
         "1. INTRODUCTION",
-        "Transnode AI, LLC ('Transnode', 'we', 'us', or 'our') respects your privacy and is committed to protecting your personal data. This Privacy Policy informs you of our policies regarding the collection, use, and disclosure of personal data when you use our website, transnode.ai, and our associated products including USVerif and AI Edu (collectively, the 'Services'). By accessing or using our Services, you agree to the collection and use of information in accordance with this policy.",
+        "Transnode AI, LLC ('Transnode', 'we', 'us', or 'our') respects your privacy and is committed to protecting your personal data. This Privacy Policy informs you of our policies regarding the collection, use, and disclosure of personal data when you use our website, transnode.ai, and our associated products including AuthenlyUSA and AI Edu (collectively, the 'Services'). By accessing or using our Services, you agree to the collection and use of information in accordance with this policy.",
         "2. INFORMATION WE COLLECT",
         "We collect several different types of information for various purposes to provide and improve our Services to you:",
         "a. Personal Identification Information: When you register for our Services, request information, or subscribe to our materials, we may ask you to provide certain personally identifiable information, including but not limited to: Email address, First and last name, Phone number, Address, State, Province, ZIP/Postal code, City.",
-        "b. Verification Data (USVerif): To provide credibility and verification services, we may collect and process sensitive information such as government-issued identification documents, academic transcripts, professional certifications, and biometric data (specifically facial scans for identity matching). This data is processed strictly for the purpose of verification and is handled with the highest level of security.",
+        "b. Verification Data (AuthenlyUSA): To provide credibility and verification services, we may collect and process sensitive information such as government-issued identification documents, academic transcripts, professional certifications, and biometric data (specifically facial scans for identity matching). This data is processed strictly for the purpose of verification and is handled with the highest level of security.",
         "c. Academic and Career Data (AI Edu): We collect information regarding your learning interests, academic history, and goals to facilitate accurate matching and personalized learning paths.",
         "d. Usage Data: We may also collect information on how the Service is accessed and used ('Usage Data'). This Usage Data may include information such as your computer's Internet Protocol address (e.g., IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers, and other diagnostic data.",
         "3. HOW WE USE YOUR INFORMATION",
@@ -471,7 +471,7 @@ const en: ContentType = {
         "1. ACCEPTANCE OF TERMS",
         "By accessing or using our Services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our Services.",
         "2. DESCRIPTION OF SERVICES",
-        "Transnode AI, LLC provides various AI-driven tools and services including USVerif and AI Edu. We reserve the right to modify or discontinue any part of the Service at any time.",
+        "Transnode AI, LLC provides various AI-driven tools and services including AuthenlyUSA and AI Edu. We reserve the right to modify or discontinue any part of the Service at any time.",
         "3. USER OBLIGATIONS",
         "You agree to use the Services only for lawful purposes and in a manner that does not infringe the rights of others. You are responsible for maintaining the confidentiality of your account credentials.",
         "4. INTELLECTUAL PROPERTY",
@@ -592,7 +592,7 @@ const zh: ContentType = {
     roadmapBtn: "查看路线图",
     items: [
       {
-        name: "USVerif",
+        name: "AuthenlyUSA",
         tagline: "可信度引擎",
         points: ["AI 可信度评分", "基于技能的验证任务", "个性化职业洞察"]
       },
@@ -662,7 +662,7 @@ const zh: ContentType = {
         "在 AI 工程、后端系统、产品开发和研究工作流方面拥有经验",
         "曾从事机器学习、分布式系统、用户研究和跨境科技产品工作"
       ],
-      closing: "我们正在扩充核心团队，以开发 USVerif 等产品。"
+      closing: "我们正在扩充核心团队，以开发 AuthenlyUSA 等产品。"
     },
     advisors: {
       title: "顾问与合作者",
@@ -860,7 +860,7 @@ const es: ContentType = {
     roadmapBtn: "Ver Hoja de Ruta",
     items: [
       {
-        name: "USVerif",
+        name: "AuthenlyUSA",
         tagline: "Motor de Credibilidad",
         points: ["Puntuación de credibilidad IA", "Verificación de habilidades", "Información profesional personalizada"]
       },
@@ -1128,7 +1128,7 @@ const ko: ContentType = {
     roadmapBtn: "로드맵 보기",
     items: [
       {
-        name: "USVerif",
+        name: "AuthenlyUSA",
         tagline: "신뢰성 엔진",
         points: ["AI 신뢰성 점수", "기술 기반 검증 과제", "개인화된 진로 통찰력"]
       },
